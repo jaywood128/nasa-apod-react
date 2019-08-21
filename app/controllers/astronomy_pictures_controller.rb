@@ -1,0 +1,2 @@
+class AstronomyPicturesController < ApplicationController
+end

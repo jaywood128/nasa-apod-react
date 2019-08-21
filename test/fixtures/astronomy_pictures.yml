@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  copyright: MyString
+  date: MyString
+  explanation: MyString
+  hdurl: MyString
+  media_type: MyString
+  title: MyString
+  url: MyString
+
+two:
+  copyright: MyString
+  date: MyString
+  explanation: MyString
+  hdurl: MyString
+  media_type: MyString
+  title: MyString
+  url: MyString
