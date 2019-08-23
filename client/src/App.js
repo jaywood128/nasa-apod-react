@@ -5,15 +5,16 @@ import {
   HashRouter as Router, 
   Route
 } from 'react-router-dom';
-import CommentsList from './components/CommentsList';
-import NewComment from './components/NewComment';
+import AstronomyPicturesContainer from './components/AstronomyPicturesContainer';
+import AstronomyPictureSearch from './components/AstronomyPictureSearch';
 
 function App() {
   return (
     <Router>
     <div className="App">
-        <Route exact path="/" component={CommentsList} />
-        <Route exact path="/comments/new" component={NewComment} />
+        {/* <Route exact path="/" component={AstronomyPicturesContainer} />
+        {/* <Route exact path="/api/v1/astronomy_pictures" component={AstronomyPictureSearch} /> */}
+        <AstronomyPictureSearch /> 
       </div>
     </Router> 
   );
