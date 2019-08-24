@@ -1,9 +1,11 @@
 import React, { Component }               from 'react';
 
 class AstronomyPictureLoad extends Component {
-
-  state = {
-    date: '',
+  constructor() {
+    super()
+    this.state = {
+      date: '',
+    }
   }
 
   handleChange = e => {
@@ -16,6 +18,7 @@ class AstronomyPictureLoad extends Component {
 
   onClick = (event) => {
     event.preventDefault()
+    debugger
     this.props.fetchPhotos()
   }
 
@@ -23,7 +26,7 @@ class AstronomyPictureLoad extends Component {
     return (
         <p>
           <label htmlFor="comment">Load the last 30 days of APOD images </label>
-          <button name="content" id="" cols="30" rows="10"onSubmit={this.onClick.bind(this)}></button>
+          <button name="content" id="" cols="30" rows="10"onClick={this.onClick.bind(this)}></button>
         </p>
     )
   }

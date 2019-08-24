@@ -1,5 +1,6 @@
+import React from 'react';
 
-const AstronomyPicture = ({ id, date, explanation, hdurl, media_type, title, url }) => (
+const Picture = ({id, date, explanation, hdurl, media_type, title, url}) => {
   <div className="picture">
     <h3> id: {id} </h3> 
     <h3> date: {date} </h3> 
@@ -9,7 +10,9 @@ const AstronomyPicture = ({ id, date, explanation, hdurl, media_type, title, url
     <h1> title: {title} </h1> 
     <img src={ url } />
   </div>
-)
- export default AstronomyPicture
+}
+const AstronomyPictures = ({ pictures }) => (pictures.map( Picture))
+
+ export default AstronomyPictures
 
 

@@ -1,25 +1,33 @@
 // client/src/components/PostList.jsx
 import React, { Component }               from 'react'
 import { Link }                           from 'react-router-dom'
-
+import AstronomyPictures from './AstronomyPictures'
 class AstronomyPicturesContainer extends Component {
 
   state = {
     pictures: []
   }
 
-  fetchPhotos() {
-    fetch('/api/v1/astronomy_pictures')
+  componentDidMount() {
+    debugger
+    fetch('/api/v1/astronomy_pictures', {
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      } 
+    }
+    )
       .then(astronomyPictures => astronomyPictures .json())
       .then(astronomyPictures  => {
-        this.setState({
-          pictures : astronomyPictures 
-        })
+        console.log(astronomyPictures)
+        // this.setState({
+        //   pictures : astronomyPictures 
+        // })
       })
   }
 
   renderPictures = () => {
-   return  <AstronomyPicture pictures={this.state.pictures} fetchPhotos={this.fetchPhotos} /> 
+   return  <AstronomyPictures pictures={this.state.pictures} fetchPhotos={this.fetchPhotos} /> 
   }
 
   render() {

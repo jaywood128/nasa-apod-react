@@ -6,7 +6,7 @@ import {
   Route
 } from 'react-router-dom';
 import AstronomyPicturesContainer from './components/AstronomyPicturesContainer';
-import AstronomyPictureSearch from './components/AstronomyPictureLoad';
+
 
 function App() {
   return (
@@ -14,7 +14,8 @@ function App() {
     <div className="App">
         {/* <Route exact path="/" component={AstronomyPicturesContainer} />
         {/* <Route exact path="/api/v1/astronomy_pictures" component={AstronomyPictureSearch} /> */}
-        <AstronomyPictureLoad /> 
+       <AstronomyPicturesContainer /> 
+
       </div>
     </Router> 
   );
