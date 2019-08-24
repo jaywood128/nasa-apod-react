@@ -2,6 +2,9 @@
 import React, { Component }               from 'react'
 import { Link }                           from 'react-router-dom'
 import AstronomyPictures from './AstronomyPictures'
+import { connect } from 'react-redux'
+import { fetchPicture } from '../actions/fetchPicture'
+ 
 class AstronomyPicturesContainer extends Component {
 
   state = {
@@ -9,21 +12,8 @@ class AstronomyPicturesContainer extends Component {
   }
 
   componentDidMount() {
-    debugger
-    fetch('/api/v1/astronomy_pictures', {
-      headers : { 
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      } 
-    }
-    )
-      .then(astronomyPictures => astronomyPictures .json())
-      .then(astronomyPictures  => {
-        console.log(astronomyPictures)
-        // this.setState({
-        //   pictures : astronomyPictures 
-        // })
-      })
+    
+    this.props.fetchPicture()
   }
 
   renderPictures = () => {
@@ -39,5 +29,12 @@ class AstronomyPicturesContainer extends Component {
     )
   }
 }
+function mapDispatchToProps(dispatch) {
+  return { fetchPicture: () => dispatch({action: 'FETCH_PICTURE', payload})
+}
+}
+function mapStateToProps(state) {
+  return { pictures: state.pictures }
+}
 
-export default AstronomyPicturesContainer
+export default connect(mapStateToProps, mapDispatchToProps)(AstronomyPicturesContainer)
