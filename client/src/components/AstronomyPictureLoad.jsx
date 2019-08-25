@@ -19,13 +19,13 @@ class AstronomyPictureLoad extends Component {
   onClick = (event) => {
     event.preventDefault()
     debugger
-    this.props.fetchPhotos()
+    this.props.fetchTodaysPhoto()
   }
 
   render() {
     return (
         <p>
-          <label htmlFor="comment">Load the last 30 days of APOD images </label>
+          <label htmlFor="comment">Load today's Astro Picture! </label>
           <button name="content" id="" cols="30" rows="10"onClick={this.onClick.bind(this)}></button>
         </p>
     )

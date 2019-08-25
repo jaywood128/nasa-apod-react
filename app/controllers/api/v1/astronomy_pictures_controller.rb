@@ -4,7 +4,7 @@ module Api
 class AstronomyPicturesController < ApplicationController
 
   def show 
-    
+    binding.pry
   end 
 
   def index 

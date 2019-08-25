@@ -5,9 +5,9 @@ import App from './App';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import rootReducer from './reducers';
+import pictureReducer from './reducers/pictureReducer';
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
+const store = createStore(pictureReducer, applyMiddleware(thunk));
 
 
 ReactDOM.render(

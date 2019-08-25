@@ -3,7 +3,8 @@ import React, { Component }               from 'react'
 import { Link }                           from 'react-router-dom'
 import AstronomyPictures from './AstronomyPictures'
 import { connect } from 'react-redux'
-import { fetchPicture } from '../actions/fetchPicture'
+import { fetchTodaysPicture } from '../actions/fetchTodaysPicture'
+ import AstronomyPictureLoad from './AstronomyPictureLoad'
  
 class AstronomyPicturesContainer extends Component {
 
@@ -13,11 +14,11 @@ class AstronomyPicturesContainer extends Component {
 
   componentDidMount() {
     
-    this.props.fetchPicture()
+    this.props.fetchTodaysPicture()
   }
 
   renderPictures = () => {
-   return  <AstronomyPictures pictures={this.state.pictures} fetchPhotos={this.fetchPhotos} /> 
+   return  <AstronomyPictures pictures={this.state.pictures} /> 
   }
 
   render() {
@@ -25,16 +26,17 @@ class AstronomyPicturesContainer extends Component {
       <div>
         AstronomyPicturesList Component
         {this.renderPictures()}
+        <AstronomyPictureLoad /> 
       </div>
     )
   }
 }
-function mapDispatchToProps(dispatch) {
-  return { fetchPicture: () => dispatch({action: 'FETCH_PICTURE', payload})
-}
-}
+// function mapDispatchToProps(dispatch) {
+//   return { fetchTodaysPicture: (payload) => dispatch({action: 'FETCH_TODAYS_PICTURE', type: payload  })
+// }
+// }
 function mapStateToProps(state) {
   return { pictures: state.pictures }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(AstronomyPicturesContainer)
+export default connect(mapStateToProps, {fetchTodaysPicture})(AstronomyPicturesContainer)
