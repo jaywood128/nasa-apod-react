@@ -15,7 +15,7 @@ function App() {
         {/* <Route exact path="/" component={AstronomyPicturesContainer} />
         {/* <Route exact path="/api/v1/astronomy_pictures" component={AstronomyPictureSearch} /> */}
        <AstronomyPicturesContainer /> 
-
+        
       </div>
     </Router> 
   );
