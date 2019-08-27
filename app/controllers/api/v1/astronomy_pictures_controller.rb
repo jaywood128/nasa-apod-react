@@ -1,6 +1,6 @@
 require 'pry'
+require 'rest-client'
 require 'json'
-require 'rest-client' 
 module Api 
   module V1
 class AstronomyPicturesController < ApplicationController
@@ -16,21 +16,31 @@ class AstronomyPicturesController < ApplicationController
         format.json { render json: @todays_picture }
       end
     else
-     
-    #   response = RestClient::Request.execute(
-    #     method: "GET",
-    #     url: "https://api.nasa.gov/planetary/apod",  
-    #     headers: { Authorization: "Bearer #{ENV["API_KEY"]}" }  
-    # )    
-    
-    # @results = JSON.parse(response.body)
-    response = RestClient.get 'https://api.nasa.gov/planetary/apod', {accept: :json}
+      response = RestClient::Request.execute(
+        method: "GET",
+        url: "https://api.nasa.gov/planetary/apod?api_key=" + ENV["api_key"] 
+    )   
+    @results = JSON.parse(response.body)
+
+   @todays_astronomy_picture = AstronomyPicture.create do |astro| 
+      astro["explanation"] = @results["explanation"]
+      astro["hdurl"] = @results["hdurl"] 
+      astro["media_type"] = @results["media_type"]
+      astro["service_version"] = @results["service_version"]
+      astro["title"] = @results["title"]
+      astro["url"] = @results["url"]
+    end 
     binding.pry
-    
+    respond_to do |format| 
+      format.html 
+      format.json { render json: @results}
+      end 
+      
+
     end
 
   end 
-
+  
   def index 
     date = Date.today 
     @todays_picture = AstronomyPicture.find_or_create_by(date: date)
