@@ -17,17 +17,16 @@ class AstronomyPicturesController < ApplicationController
       end
     else
      
-      response = RestClient::Request.execute(
-        method: "GET",
-        url: "https://api.nasa.gov/planetary/apod",  
-        headers: { Authorization: "Bearer #{ENV["api_key"]}" }  
-    )    
+    #   response = RestClient::Request.execute(
+    #     method: "GET",
+    #     url: "https://api.nasa.gov/planetary/apod",  
+    #     headers: { Authorization: "Bearer #{ENV["API_KEY"]}" }  
+    # )    
     
-    @results = JSON.parse(response.body)
+    # @results = JSON.parse(response.body)
+    response = RestClient.get 'https://api.nasa.gov/planetary/apod', {accept: :json}
     binding.pry
-     
-
-
+    
     end
 
   end 
