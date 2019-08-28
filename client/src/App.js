@@ -10,14 +10,13 @@ import AstronomyPicturesContainer from './components/AstronomyPicturesContainer'
 
 function App() {
   return (
-    <Router>
     <div className="App">
-        {/* <Route exact path="/" component={AstronomyPicturesContainer} />
+    <Router>
+        <Route exact path="/" component={AstronomyPicturesContainer} />
         {/* <Route exact path="/api/v1/astronomy_pictures" component={AstronomyPictureSearch} /> */}
-       <AstronomyPicturesContainer /> 
-        
-      </div>
+       {/* <AstronomyPicturesContainer />  */}
     </Router> 
+    </div>
   );
 }
 

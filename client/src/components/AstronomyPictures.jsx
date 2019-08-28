@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Picture = ({id, date, explanation, hdurl, media_type, title, url}) => {
+  debugger
   <div className="picture">
     <h3> id: {id} </h3> 
     <h3> date: {date} </h3> 

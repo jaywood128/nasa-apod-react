@@ -22,7 +22,9 @@ class AstronomyPicturesController < ApplicationController
     )   
     @results = JSON.parse(response.body)
 
-   @todays_astronomy_picture = AstronomyPicture.create do |astro| 
+   @todays_astronomy_picture = AstronomyPicture.create do |astro|
+      astro["copyright"] = @results["copyright"]
+      astro["date"] = @results["date"]
       astro["explanation"] = @results["explanation"]
       astro["hdurl"] = @results["hdurl"] 
       astro["media_type"] = @results["media_type"]
@@ -30,11 +32,8 @@ class AstronomyPicturesController < ApplicationController
       astro["title"] = @results["title"]
       astro["url"] = @results["url"]
     end 
-    binding.pry
-    respond_to do |format| 
-      format.html 
-      format.json { render json: @results}
-      end 
+    
+    render json: @todays_astronomy_picture
       
 
     end

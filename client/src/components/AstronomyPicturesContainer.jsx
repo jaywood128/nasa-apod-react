@@ -7,17 +7,19 @@ import { fetchTodaysPicture } from '../actions/fetchTodaysPicture'
  import AstronomyPictureLoad from './AstronomyPictureLoad'
  
 class AstronomyPicturesContainer extends Component {
-
-  state = {
+  constructor() {
+  super()
+  this.state = {
     pictures: []
   }
-
+  }
   componentDidMount() {
     
     this.props.fetchTodaysPicture()
   }
 
   renderPictures = () => {
+   
    return  <AstronomyPictures pictures={this.state.pictures} /> 
   }
 
@@ -36,6 +38,7 @@ class AstronomyPicturesContainer extends Component {
 // }
 // }
 function mapStateToProps(state) {
+  debugger
   return { pictures: state.pictures }
 }
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_22_191013) do
+ActiveRecord::Schema.define(version: 2019_08_28_153020) do
 
   create_table "astronomy_pictures", force: :cascade do |t|
     t.string "copyright"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 2019_08_22_191013) do
     t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "service_version"
+    t.string "copy_right"
   end
 
   create_table "comments", force: :cascade do |t|

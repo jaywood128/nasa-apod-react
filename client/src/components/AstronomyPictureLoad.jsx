@@ -18,7 +18,6 @@ class AstronomyPictureLoad extends Component {
 
   onClick = (event) => {
     event.preventDefault()
-    debugger
     this.props.fetchTodaysPhoto()
   }
 
