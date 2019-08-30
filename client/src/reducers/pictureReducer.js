@@ -3,6 +3,7 @@ export default function pictureReducer (state = {
 }, action) {
   switch(action.type) {
     case 'FETCH_TODAYS_PHOTO' : 
+     
       return (
         {...state,
           pictures: [

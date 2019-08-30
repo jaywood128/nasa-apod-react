@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "@babel/preset-env": "^7.5.5",
+    "redux-devtools-extension": "^2.13.8",
     "webpack-dev-server": "^3.8.0"
   }
 }

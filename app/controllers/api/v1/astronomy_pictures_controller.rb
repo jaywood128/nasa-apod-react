@@ -32,7 +32,7 @@ class AstronomyPicturesController < ApplicationController
       astro["title"] = @results["title"]
       astro["url"] = @results["url"]
     end 
-    binding.pry
+    
     render json: @todays_astronomy_picture
       
 

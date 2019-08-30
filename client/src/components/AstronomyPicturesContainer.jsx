@@ -4,31 +4,21 @@ import { Link }                           from 'react-router-dom'
 import AstronomyPictures from './AstronomyPictures'
 import { connect } from 'react-redux'
 import { fetchTodaysPicture } from '../actions/fetchTodaysPicture'
- import AstronomyPictureLoad from './AstronomyPictureLoad'
+
  
 class AstronomyPicturesContainer extends Component {
-  constructor() {
-  super()
-  this.state = {
-    pictures: []
-  }
-  }
+ 
   componentDidMount() {
     
     this.props.fetchTodaysPicture()
   }
 
-  renderPictures = () => {
-   
-   return  <AstronomyPictures pictures={this.state.pictures} /> 
-  }
-
   render() {
+    debugger
     return (
       <div>
         AstronomyPicturesList Component
-        {this.renderPictures()}
-        <AstronomyPictureLoad /> 
+        <AstronomyPictures pictures={this.props.pictures} />
       </div>
     )
   }
@@ -38,8 +28,8 @@ class AstronomyPicturesContainer extends Component {
 // }
 // }
 function mapStateToProps(state) {
-  debugger
-  return { pictures: state.pictures }
+
+  return { pictures: state.pictures.pictures }
 }
 
 export default connect(mapStateToProps, {fetchTodaysPicture})(AstronomyPicturesContainer)

@@ -1,17 +1,18 @@
-import React from 'react';
+import React, { Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import AstronomyPicturesContainer from './components/AstronomyPicturesContainer';
 
 
-function App() {
-  return (
-    <div className="App">
-      <h2> Inside App.js</h2>
-       <AstronomyPicturesContainer /> 
-    
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <h2> Inside App.js</h2>
+         <AstronomyPicturesContainer /> 
+      </div>
+    );
+  }
 }
 
 
