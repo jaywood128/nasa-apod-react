@@ -1,6 +1,6 @@
 task :last_thirty_days do 
   api_dates = (1.month.ago.to_date..Date.today).map{ |date| date }
-binding.pry
+
   response = RestClient::Request.execute(
     method: "GET",
     url: "https://api.nasa.gov/planetary/apod?api_key=" + ENV["api_key"] 
