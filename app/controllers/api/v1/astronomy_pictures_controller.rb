@@ -1,6 +1,7 @@
 require 'pry'
 require 'rest-client'
 require 'json'
+require 'rake'
 module Api 
   module V1
 class AstronomyPicturesController < ApplicationController
@@ -16,24 +17,27 @@ class AstronomyPicturesController < ApplicationController
         format.json { render json: @todays_picture }
       end
     else
-      response = RestClient::Request.execute(
-        method: "GET",
-        url: "https://api.nasa.gov/planetary/apod?api_key=" + ENV["api_key"] 
-    )   
-    @results = JSON.parse(response.body)
-
-   @todays_astronomy_picture = AstronomyPicture.create do |astro|
-      astro["copyright"] = @results["copyright"]
-      astro["date"] = @results["date"]
-      astro["explanation"] = @results["explanation"]
-      astro["hdurl"] = @results["hdurl"] 
-      astro["media_type"] = @results["media_type"]
-      astro["service_version"] = @results["service_version"]
-      astro["title"] = @results["title"]
-      astro["url"] = @results["url"]
-    end 
+      call_rake :last_thirty_days 
     
-    render json: @todays_astronomy_picture
+  #     response = RestClient::Request.execute(
+  #       method: "GET",
+  #       url: "https://api.nasa.gov/planetary/apod?api_key=" + ENV["api_key"] 
+  #   )   
+  #   @results = JSON.parse(response.body)
+      
+
+  #  @todays_astronomy_picture = AstronomyPicture.create do |astro|
+  #     astro["copyright"] = @results["copyright"]
+  #     astro["date"] = @results["date"]
+  #     astro["explanation"] = @results["explanation"]
+  #     astro["hdurl"] = @results["hdurl"] 
+  #     astro["media_type"] = @results["media_type"]
+  #     astro["service_version"] = @results["service_version"]
+  #     astro["title"] = @results["title"]
+  #     astro["url"] = @results["url"]
+  #   end 
+    
+  #   render json: @todays_astronomy_picture
       
 
     end
