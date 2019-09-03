@@ -3,8 +3,10 @@
   namespace :api do 
     namespace :v1 do 
       resources :astronomy_pictures 
+      get '/load', to: 'astronomy_pictures#load'
     end 
   end
+
   devise_for :users
     get 'welcome/home'
     get '/app', to: 'welcome#app', as: 'app'

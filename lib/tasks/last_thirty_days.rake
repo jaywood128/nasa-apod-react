@@ -11,7 +11,12 @@ task :last_thirty_days do
   @result = JSON.parse(response.body)
   @past_thirty_days << @result
  end 
- binding.pry
-  return @past_thirty_days
+ 
+    @past_thirty_days.map do |pic| 
+    AstronomyPicture.create(pic)
+   end 
+  
+  
+
 
 end 
