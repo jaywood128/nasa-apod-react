@@ -10,11 +10,11 @@ import AstronomyPicturesContainer from './components/AstronomyPicturesContainer'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import rootReducer from './reducers/index.js'
 
-// const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(
   rootReducer, 
-  applyMiddleware(thunk, logger)
+  composeEnhancer(applyMiddleware(thunk, logger))
 )
 ReactDOM.render(
   <Provider store={store}> 

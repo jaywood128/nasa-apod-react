@@ -2,7 +2,7 @@
   resources :comments
   namespace :api do 
     namespace :v1 do 
-      resources :astronomy_pictures 
+      resources :astronomy_pictures, param: :date 
       get '/load', to: 'astronomy_pictures#load'
     end 
   end
