@@ -8,27 +8,22 @@ import { fetchLastThirtyDays } from '../actions/fetchLastThirtyDays';
 
  
 class AstronomyPicturesContainer extends Component {
- 
+  constructor(props) {
+    super()
+  }
+  
   componentDidMount() {
-    function formatDate(date) {
-      var monthNames = [
-        "01", "02", "03",
-        "April", "May", "June", "July",
-        "August", "September", "October",
-        "November", "December"
-      ];
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
     
-      var day = date.getDate();
-      var monthIndex = date.getMonth();
-      var year = date.getFullYear();
+    let todays_date = yyyy + '/' + mm + '/' + dd; 
     
-      return day + ' ' + monthNames[monthIndex] + ' ' + year;
-    }
-
-    let date = Date.now()
-    debugger
-    const todays_picture = this.props.pictures.filter(day => day.date === date);
-    if (!todays_picture) {
+    const todays_picture = this.props.pictures.pictures.filter(day => day.date === todays_date);
+    
+    if (todays_picture.length == 0) {
+      debugger 
       this.props.fetchTodaysPicture()
     }
   }
@@ -38,7 +33,7 @@ class AstronomyPicturesContainer extends Component {
     return (
       <div>
         AstronomyPicturesList Component
-        {/* <AstronomyPictures pictures={this.props.pictures} /> */}
+        <AstronomyPictures pictures={this.props.pictures.pictures} />
       </div>
     )
   }

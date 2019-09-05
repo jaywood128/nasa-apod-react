@@ -11,10 +11,12 @@ module Api
     class AstronomyPicturesController < ApplicationController
 
       def show 
-      
-        date = params[:date] == "today" ? Date.now.to_s  :  params[:date] 
+        time = Time.new 
+        formatted_date = time.strftime("%Y-%m-%d") 
+        date = params[:date] == "today" ? formatted_date  :  params[:date] 
        
         @todays_picture = AstronomyPicture.find_by(date: date )
+      
         if @todays_picture == nil 
           AstronomyPicture.create_todays_picture(date)
         end 
@@ -22,6 +24,8 @@ module Api
       end 
 
       def index   
+        AstronomyPicture.load_last_thirty_days()
+        binding.pry
         render :json => AstronomyPicture.all 
       end 
       

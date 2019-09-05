@@ -1,15 +1,17 @@
 export default function pictureReducer (state = {
-  pictures: []
+  pictures: [], todaysPicture: {}
 }, action) {
   switch(action.type) {
+    case 'PICTURE_LOADING' : 
+      return (
+        {...state, 
+        pictures: [...state.pictures, state.todaysPicture]}
+      )
     case 'FETCH_TODAYS_PHOTO' : 
-     
+     debugger 
       return (
         {...state,
-          pictures: [
-            ...state.pictures,
-            action.picture
-          ]
+          todaysPicture: action.picture
         }
       )
     case 'FETCH_LAST_THIRTY_DAYS' : 
