@@ -1,7 +1,11 @@
 import React from 'react';
 import Picture from './Picture'
-const AstronomyPictures = ({ pictures }) => (pictures.map(((picture, index) => <Picture picture={picture} key={index} /> ))) 
+class AstronomyPictures extends React.Component {
 
- export default AstronomyPictures
-
+  render() { 
+      debugger 
+    return <Picture picture={this.props.picture} /> 
+  } 
+}
+export default AstronomyPictures
 

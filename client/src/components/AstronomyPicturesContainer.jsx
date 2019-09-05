@@ -18,22 +18,21 @@ class AstronomyPicturesContainer extends Component {
     var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
     var yyyy = today.getFullYear();
     
-    let todays_date = yyyy + '/' + mm + '/' + dd; 
-    
-    const todays_picture = this.props.pictures.pictures.filter(day => day.date === todays_date);
-    
-    if (todays_picture.length == 0) {
-      debugger 
+    let todays_date = yyyy + '-' + mm + '-' + dd; 
+    // const todays_picture = this.props.pictures.pictures.filter(day => day.date === todays_date);
+    debugger
+    if (this.props.pictures.todaysPicture.length == 0) {
+     debugger 
       this.props.fetchTodaysPicture()
     }
   }
 
   render() {
-    
+    debugger
     return (
       <div>
         AstronomyPicturesList Component
-        <AstronomyPictures pictures={this.props.pictures.pictures} />
+        <AstronomyPictures picture={this.props.pictures.todaysPicture} />
       </div>
     )
   }
