@@ -5,8 +5,8 @@ import AstronomyPictures from './AstronomyPictures'
 import { connect } from 'react-redux'
 import { fetchTodaysPicture } from '../actions/fetchTodaysPicture'
 import { fetchLastThirtyDays } from '../actions/fetchLastThirtyDays';
-
- 
+import { fetchSearchByDatePicture } from '../actions/fetchSearchByDatePicture'
+import SearchByDate from './SearchByDate'
 class AstronomyPicturesContainer extends Component {
   constructor(props) {
     super()
@@ -20,18 +20,15 @@ class AstronomyPicturesContainer extends Component {
     
     let todays_date = yyyy + '-' + mm + '-' + dd; 
     // const todays_picture = this.props.pictures.pictures.filter(day => day.date === todays_date);
-    debugger
-    if (this.props.pictures.todaysPicture.length == 0) {
-     debugger 
+    if (Object.keys(this.props.pictures.todaysPicture).length === 0 && this.props.pictures.todaysPicture.constructor === Object) {
+
       this.props.fetchTodaysPicture()
     }
   }
-
   render() {
-    debugger
     return (
       <div>
-        AstronomyPicturesList Component
+        <SearchByDate fetchSearchByDatePicture={this.props.fetchSearchByDatePicture} /> 
         <AstronomyPictures picture={this.props.pictures.todaysPicture} />
       </div>
     )
@@ -44,7 +41,8 @@ function mapStateToProps(state) {
 }
 const mapDispatchToProps = dispatch => ({
   fetchLastThirtyDays: ()=> dispatch(fetchLastThirtyDays()),
-  fetchTodaysPicture: ()=> dispatch(fetchTodaysPicture()) 
+  fetchTodaysPicture: ()=> dispatch(fetchTodaysPicture()), 
+  fetchSearchByDatePicture: ()=> dispatch(fetchSearchByDatePicture())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(AstronomyPicturesContainer)

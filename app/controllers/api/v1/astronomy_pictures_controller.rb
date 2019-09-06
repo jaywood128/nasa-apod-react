@@ -23,9 +23,12 @@ module Api
         render json: @todays_picture 
       end 
 
+      def search 
+        binding.pry
+      end 
+
       def index   
         AstronomyPicture.load_last_thirty_days()
-        binding.pry
         render :json => AstronomyPicture.all 
       end 
       

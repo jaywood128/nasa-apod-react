@@ -1,16 +1,15 @@
 import React from 'react';
 
-const Picture = ({id, date, explanation, hdurl, media_type, title, url}) => {
-  debugger
+const Picture = (picture) => {
   return (
-  <div key ={id} className="picture">
-    <h3> id: {id} </h3> 
-    <h3> date: {date} </h3> 
-    <p> Explanation: {explanation} </p> 
-    <a href ={hdurl}> </a>
-    <h3> media_type: {media_type} </h3>
-    <h1> title: {title} </h1> 
-    <img src={ url } />
+  <div className="picture"> 
+    <h3> {picture.picture.title} </h3> 
+    <h3> id: {picture.picture.id} </h3> 
+    <h3> date: {picture.picture.date} </h3> 
+    <p> Explanation: {picture.picture.explanation} </p> 
+    <a href ={picture.picture.hdurl}> </a>
+    <h3> media_type: {picture.picture.media_type} </h3>
+    <img src={ picture.picture.url } />
   </div> 
   )
 }

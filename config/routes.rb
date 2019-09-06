@@ -4,6 +4,7 @@
     namespace :v1 do 
       resources :astronomy_pictures, param: :date 
       get '/load', to: 'astronomy_pictures#index'
+      get '/search', to: 'astronomy_pictures#search', param: :date
     end 
   end
 

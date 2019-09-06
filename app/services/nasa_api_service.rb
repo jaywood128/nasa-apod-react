@@ -8,7 +8,7 @@ class NasaApiService
     end 
   end 
   def self.get_picture_by_date(date)
-    binding.pry
+   
     response = RestClient::Request.execute(
       method: "GET",
       url: "https://api.nasa.gov/planetary/apod?api_key=" + ENV["api_key"] + "&date=#{date}"
