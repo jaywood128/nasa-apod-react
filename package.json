@@ -8,6 +8,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-responsive-carousel": "^3.1.50",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0"
   },

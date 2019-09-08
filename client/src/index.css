@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+div .todaysPicture {
+  border: 1px solid black;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  margin-right: 10px;
+  margin-left: 10px;
+}

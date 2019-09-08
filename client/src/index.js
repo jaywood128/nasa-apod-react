@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import { createStore, compose, applyMiddleware, combineReducers } from 'redux';
 import logger from 'redux-logger'
 import thunk from 'redux-thunk';
-import AstronomyPicturesContainer from './components/AstronomyPicturesContainer'
+import AstronomyPictureContainer from './components/AstronomyPictureContainer'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import rootReducer from './reducers/index.js'
 

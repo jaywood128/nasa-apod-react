@@ -7,7 +7,8 @@ import { fetchTodaysPicture } from '../actions/fetchTodaysPicture'
 import { fetchLastThirtyDays } from '../actions/fetchLastThirtyDays';
 import { fetchSearchByDatePicture } from '../actions/fetchSearchByDatePicture'
 import SearchByDate from './SearchByDate'
-class AstronomyPicturesContainer extends Component {
+import Picture from './Picture'
+class AstronomyPictureContainer extends Component {
   constructor(props) {
     super()
   }
@@ -20,16 +21,27 @@ class AstronomyPicturesContainer extends Component {
     
     let todays_date = yyyy + '-' + mm + '-' + dd; 
     // const todays_picture = this.props.pictures.pictures.filter(day => day.date === todays_date);
+    
     if (Object.keys(this.props.pictures.todaysPicture).length === 0 && this.props.pictures.todaysPicture.constructor === Object) {
-
+  
       this.props.fetchTodaysPicture()
     }
   }
   render() {
+    let fakeData
+    if (this.props.pictures.todaysPicture !== null && Object.keys(this.props.pictures.todaysPicture).length === 0 && this.props.pictures.todaysPicture.constructor === Object) {
+      fakeData = <h1> Picture Loading! </h1>
+    }
+    else {
+      fakeData = <div className="todaysPicture"> 
+        <SearchByDate fetchSearchByDatePicture={this.props.fetchSearchByDatePicture} /> 
+        <Picture picture={this.props.pictures.todaysPicture} />
+      </div>
+    }
+      
     return (
       <div>
-        <SearchByDate fetchSearchByDatePicture={this.props.fetchSearchByDatePicture} /> 
-        <AstronomyPictures picture={this.props.pictures.todaysPicture} />
+        {fakeData}
       </div>
     )
   }
@@ -45,4 +57,4 @@ const mapDispatchToProps = dispatch => ({
   fetchSearchByDatePicture: ()=> dispatch(fetchSearchByDatePicture())
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(AstronomyPicturesContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(AstronomyPictureContainer)
