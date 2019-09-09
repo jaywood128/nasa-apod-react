@@ -8,6 +8,7 @@ import { fetchLastThirtyDays } from '../actions/fetchLastThirtyDays';
 import { fetchSearchByDatePicture } from '../actions/fetchSearchByDatePicture'
 import SearchByDate from './SearchByDate'
 import Picture from './Picture'
+import AstronomyPictureCarousel from './AstronomyPictureCarousel'
 class AstronomyPictureContainer extends Component {
   constructor(props) {
     super()
@@ -21,10 +22,12 @@ class AstronomyPictureContainer extends Component {
     
     let todays_date = yyyy + '-' + mm + '-' + dd; 
     // const todays_picture = this.props.pictures.pictures.filter(day => day.date === todays_date);
-    
+    debugger 
     if (Object.keys(this.props.pictures.todaysPicture).length === 0 && this.props.pictures.todaysPicture.constructor === Object) {
-  
       this.props.fetchTodaysPicture()
+    }
+    if (this.props.pictures.pictures.length === 0) {
+      this.props.fetchLastThirtyDays()
     }
   }
   render() {
@@ -36,6 +39,14 @@ class AstronomyPictureContainer extends Component {
       fakeData = <div className="todaysPicture"> 
         <SearchByDate fetchSearchByDatePicture={this.props.fetchSearchByDatePicture} /> 
         <Picture picture={this.props.pictures.todaysPicture} />
+        {/* <AstronomyPictures pictures={this.props.pictures.pictures} />  */}
+       {this.props.pictures.pictures.length !== 0 ? (
+         <AstronomyPictureCarousel pictures={this.props.pictures.pictures} />
+       ): (
+         <h3> Loading Carousel </h3> 
+       )
+      }
+  
       </div>
     }
       
