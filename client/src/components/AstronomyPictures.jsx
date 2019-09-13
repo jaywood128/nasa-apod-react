@@ -4,7 +4,7 @@ import AstronomyPictureCarousel from './AstronomyPictureCarousel'
 class AstronomyPictures extends React.Component {
 
   render() { 
-      const AstronomyPictureList = this.props.pictures.map((picture, index) => {
+      const AstronomyPicturesList = this.props.pictures.map((picture, index) => {
         return (
           <AstronomyPictureCarousel 
           picture={picture} 
@@ -13,7 +13,7 @@ class AstronomyPictures extends React.Component {
       }) 
     return (
       <ul> 
-        {AstronomyPictureList}
+        {AstronomyPicturesList}
       </ul>
     )
   }
