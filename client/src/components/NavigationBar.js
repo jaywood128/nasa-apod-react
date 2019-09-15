@@ -1,7 +1,10 @@
 import React from 'react'
 import { Nav, Navbar } from 'react-bootstrap'
 import styled from 'styled-components'
-
+import { Link } from 'react-router-dom';
+// require('react-dom');
+// window.React2 = require('react');
+// console.log(window.React1 === window.React2);
 const Styles = styled.div`
 
   .navbar {
@@ -13,7 +16,7 @@ const Styles = styled.div`
   }
 `
 export const NavigationBar = () => (
-  <Styles>
+  <Styles> 
     <Navbar expand="lg">
       <Navbar.Brand href="/">Code Life</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -37,6 +40,6 @@ export const NavigationBar = () => (
         </Nav>
       </Navbar.Collapse>
     </Navbar>
-  </Styles >
+    </Styles>
 )
 

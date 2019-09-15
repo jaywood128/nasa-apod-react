@@ -8,5 +8,8 @@ module.exports = {
       loaders: [
           { test: /\.css$/, loader: "style-loader!css-loader" }
       ]
+  },
+  alias: {
+    react: path.resolve('./node_modules/react')
   }
 };
