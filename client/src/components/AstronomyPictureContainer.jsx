@@ -36,9 +36,8 @@ class AstronomyPictureContainer extends Component {
     }
     else {
       fakeData = <div className="todaysPicture"> 
-        <SearchByDate fetchSearchByDatePicture={this.props.fetchSearchByDatePicture} /> 
+        {/* <SearchByDate fetchSearchByDatePicture={this.props.fetchSearchByDatePicture} />  */}
         <Picture picture={this.props.pictures.todaysPicture} />
-  
       </div>
     }
       

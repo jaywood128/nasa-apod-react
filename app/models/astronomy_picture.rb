@@ -1,6 +1,8 @@
 
 class AstronomyPicture < ApplicationRecord
   has_many :comments
+  has_many :user_astronomy_pictures 
+  has_many :users, through: :user_astronomy_pictures
 
   def self.load_last_thirty_days 
     NasaApiService.get_last_thirty_days.each do |picture| 

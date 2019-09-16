@@ -8,9 +8,9 @@ import { Carousel } from 'react-responsive-carousel';
    return  props.pictures[0].map(picture => { 
       
       if (picture.media_type === "video") {
-        
+        debugger 
         return <div key={picture.id}>
-                 <iframe width="560" height="315" src="{`${picture.url}#t=0.5`}" />
+                 <iframe width="560" height="315" src="{`${picture.url}`}" />
                  <p className="legend"> Explanation: {picture.explanation} </p>  
               </div>
       } else {
