@@ -12,13 +12,6 @@ class AstronomyPicturesLastThirtyDaysContainer extends  React.Component{
       this.props.fetchLastThirtyDays()
     }
   }
-
-//   let carousel = {this.props.pictures.pictures.length !== 0 ? (
-//     <AstronomyPictureCarousel pictures={this.props.pictures.pictures} />
-//  ): (
-//    <h3> Loading Carousel </h3> 
-//  )
-// }
   
   render () {
    return(

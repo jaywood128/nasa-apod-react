@@ -7,6 +7,8 @@ import { fetchTodaysPicture } from '../actions/fetchTodaysPicture'
 import { fetchSearchByDatePicture } from '../actions/fetchSearchByDatePicture'
 import SearchByDate from './SearchByDate'
 import Picture from './Picture'
+import FavoriteToggle from './FavoriteToggle'
+
 
 class AstronomyPictureContainer extends Component {
   constructor(props) {
@@ -21,13 +23,11 @@ class AstronomyPictureContainer extends Component {
     
     let todays_date = yyyy + '-' + mm + '-' + dd; 
     // const todays_picture = this.props.pictures.pictures.filter(day => day.date === todays_date);
-    debugger 
+   
     if (Object.keys(this.props.pictures.todaysPicture).length === 0 && this.props.pictures.todaysPicture.constructor === Object) {
       this.props.fetchTodaysPicture()
     }
-    // if (this.props.pictures.pictures.length === 0) {
-    //   this.props.fetchLastThirtyDays()
-    // }
+  
   }
   render() {
     let fakeData
@@ -38,6 +38,7 @@ class AstronomyPictureContainer extends Component {
       fakeData = <div className="todaysPicture"> 
         {/* <SearchByDate fetchSearchByDatePicture={this.props.fetchSearchByDatePicture} />  */}
         <Picture picture={this.props.pictures.todaysPicture} />
+        <FavoriteToggle/> 
       </div>
     }
       

@@ -1,6 +1,9 @@
 import React from 'react';
+import FavoriteToggle from './FavoriteToggle'
+
 
 const Picture = (picture) => {
+
   if (picture.picture.media_type === "video") {
     return (
       <div className="video"> 
@@ -35,6 +38,7 @@ const Picture = (picture) => {
           </div>
         </div>
       </div>
+    
     )
 
   }

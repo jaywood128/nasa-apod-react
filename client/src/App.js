@@ -15,13 +15,13 @@ class App extends Component {
   render() {
     return (
             <Router>
-                <Navbar/> 
+                <Navbar/>
                   <Switch> 
                     <Route exact path='/app' component={AstronomyPictureContainer }/> 
                     <Route path='/last_thirty_days' component={AstronomyPicturesLastThirtyDaysContainer}/> 
                     {/* <Route component={NoMatch}/>  */}
                   </Switch>
-              </Router>  
+              </Router> 
     );
   }
 }
