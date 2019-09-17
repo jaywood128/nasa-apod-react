@@ -1,9 +1,12 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
+const getToday = "todays day"
+
  export const Navbar = () => (
   <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
     <Link className="navbar-brand" to="/app">Today's Picture</Link>
+    {/* <Link className="navbar-brand" to="/astronomy_picture/getToday">Today's Picture</Link> */}
     <Link className="navbar-brand" to="/last_thirty_days"> Astro Slide Show</Link>
   {/* <a className="navbar-brand" href="#">Navbar</a> */}
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

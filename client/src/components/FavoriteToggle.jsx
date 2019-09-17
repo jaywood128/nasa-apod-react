@@ -1,5 +1,6 @@
 import React from 'react'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { fetchAddAstronomyPictureToFavorites } from './fetchAddAstronomyPictureToFavorites'
 class FavoriteToggle extends React.Component {
   constructor(props) {
     super(props);
@@ -12,17 +13,18 @@ class FavoriteToggle extends React.Component {
   handleClick() {
     this.setState(prevState => ({
       isFavorited: !prevState.isFavorited
-    }));
+    }))
+    let date = this.props.date  
+  fetchAddAstronomyPictureToFavorites(date)
+  
   }
 
   render() {
    
     return (
         <div> 
-          <h1> HEART!</h1>
       <button onClick={this.handleClick}>
-        {/* {this.state.isFavorited ? (<i className="fas fa-star"></i>) : (<i className="far fa-star"></i>)} */}
-        <i className="fas fa-heart"></i>
+        {this.state.isFavorited ? <FontAwesomeIcon onClick={this.handleClick} size="2x" icon={['fa', 'heart']} color="#ffd700"/> : <FontAwesomeIcon size="2x" icon={['far', 'heart']} color="#ffd700" />  }
       </button>
         </div> 
     );

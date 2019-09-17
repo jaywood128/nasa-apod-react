@@ -3,7 +3,7 @@ import React, { Component }               from 'react'
 import { Link }                           from 'react-router-dom'
 import AstronomyPictures from './AstronomyPictures'
 import { connect } from 'react-redux'
-import { fetchTodaysPicture } from '../actions/fetchTodaysPicture'
+import { fetchPicture } from '../actions/fetchPicture'
 import { fetchSearchByDatePicture } from '../actions/fetchSearchByDatePicture'
 import SearchByDate from './SearchByDate'
 import Picture from './Picture'
@@ -21,11 +21,11 @@ class AstronomyPictureContainer extends Component {
     var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
     var yyyy = today.getFullYear();
     
-    let todays_date = yyyy + '-' + mm + '-' + dd; 
+    let date = yyyy + '-' + mm + '-' + dd; 
     // const todays_picture = this.props.pictures.pictures.filter(day => day.date === todays_date);
    
     if (Object.keys(this.props.pictures.todaysPicture).length === 0 && this.props.pictures.todaysPicture.constructor === Object) {
-      this.props.fetchTodaysPicture()
+      this.props.fetchPicture(date)
     }
   
   }
@@ -38,7 +38,6 @@ class AstronomyPictureContainer extends Component {
       fakeData = <div className="todaysPicture"> 
         {/* <SearchByDate fetchSearchByDatePicture={this.props.fetchSearchByDatePicture} />  */}
         <Picture picture={this.props.pictures.todaysPicture} />
-        <FavoriteToggle/> 
       </div>
     }
       

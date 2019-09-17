@@ -31,7 +31,7 @@ const Picture = (picture) => {
       <div className="container"> 
         <div className="card" >
           <img src={picture.picture.url} className="card-img-top" ></img>
-          <h3 className="card-title"> {picture.picture.title} </h3>
+          <h3 className="card-title"> {picture.picture.title} </h3> <FavoriteToggle date={picture.picture.date}/> 
           <h3> Date: {picture.picture.date} </h3> 
           <div className="card-body">
             <p className="card-text"><strong>Description: </strong>{picture.picture.explanation} </p>

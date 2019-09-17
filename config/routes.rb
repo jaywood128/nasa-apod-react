@@ -3,9 +3,12 @@
   namespace :api do 
     namespace :v1 do 
       resources :astronomy_pictures, param: :date 
-      get '/load', to: 'astronomy_pictures#index'
-      get '/search', to: 'astronomy_pictures#search', param: :date
+        get '/load', to: 'astronomy_pictures#index'
+        get '/search', to: 'astronomy_pictures#search', param: :date
+        get '/astronomy_pictures/:date', to: 'astronomy_pictures#show' 
     end 
+    resources :users 
+    get '/add_picture_to_favorites/*date', to: 'users#create'
   end
 
   devise_for :users
