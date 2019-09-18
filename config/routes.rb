@@ -6,9 +6,10 @@
         get '/load', to: 'astronomy_pictures#index'
         get '/search', to: 'astronomy_pictures#search', param: :date
         get '/astronomy_pictures/:date', to: 'astronomy_pictures#show' 
+      resources :users 
+        get '/add_picture_to_favorites/:date', to: 'users#create'
     end 
-    resources :users 
-    get '/add_picture_to_favorites/*date', to: 'users#create'
+    # resources :users 
   end
 
   devise_for :users

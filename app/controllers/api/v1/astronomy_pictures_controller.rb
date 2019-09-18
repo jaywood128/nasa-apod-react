@@ -11,12 +11,12 @@ module Api
     class AstronomyPicturesController < ApplicationController
 
       def show 
-       
+     
         time = Time.new 
         formatted_date = time.strftime("%Y-%m-%d") 
         date = params[:date] == "today" ? formatted_date  :  params[:date] 
-      
-        @todays_picture = AstronomyPicture.find_by(date: date )
+
+        @todays_picture = AstronomyPicture.find_by(date: date)
       
         if @todays_picture == nil 
           AstronomyPicture.create_todays_picture(date)

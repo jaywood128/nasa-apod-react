@@ -1,6 +1,6 @@
 module Api 
   module V1
-    class UserController < ApplicationController
+    class UsersController < ApplicationController
       def create 
         binding.pry
       end 

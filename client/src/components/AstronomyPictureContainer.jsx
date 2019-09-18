@@ -25,7 +25,8 @@ class AstronomyPictureContainer extends Component {
     // const todays_picture = this.props.pictures.pictures.filter(day => day.date === todays_date);
    
     if (Object.keys(this.props.pictures.todaysPicture).length === 0 && this.props.pictures.todaysPicture.constructor === Object) {
-      this.props.fetchPicture(date)
+  
+      this.props.fetchPicture(this.props.match.params.date)
     }
   
   }
@@ -54,7 +55,7 @@ function mapStateToProps(state) {
   return { pictures: state.pictures }
 }
 const mapDispatchToProps = dispatch => ({
-  fetchTodaysPicture: ()=> dispatch(fetchTodaysPicture()), 
+  fetchPicture: (date)=> dispatch(fetchPicture(date)), 
   fetchSearchByDatePicture: ()=> dispatch(fetchSearchByDatePicture())
 })
 

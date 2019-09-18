@@ -5,7 +5,7 @@ const getToday = "todays day"
 
  export const Navbar = () => (
   <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-    <Link className="navbar-brand" to="/app">Today's Picture</Link>
+    <Link className="navbar-brand" to="/astronomy_pictures/today">Today's Picture</Link>
     {/* <Link className="navbar-brand" to="/astronomy_picture/getToday">Today's Picture</Link> */}
     <Link className="navbar-brand" to="/last_thirty_days"> Astro Slide Show</Link>
   {/* <a className="navbar-brand" href="#">Navbar</a> */}
