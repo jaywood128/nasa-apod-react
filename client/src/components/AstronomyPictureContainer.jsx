@@ -4,11 +4,9 @@ import { Link }                           from 'react-router-dom'
 import AstronomyPictures from './AstronomyPictures'
 import { connect } from 'react-redux'
 import { fetchPicture } from '../actions/fetchPicture'
-import { fetchSearchByDatePicture } from '../actions/fetchSearchByDatePicture'
-import SearchByDate from './SearchByDate'
 import Picture from './Picture'
 import FavoriteToggle from './FavoriteToggle'
-
+import AstronomyVideo from './AstronomyVideo'
 
 class AstronomyPictureContainer extends Component {
   constructor(props) {
@@ -31,14 +29,14 @@ class AstronomyPictureContainer extends Component {
   
   }
   render() {
+    let picture = this.props.pictures.todaysPicture
     let fakeData
-    if (this.props.pictures.todaysPicture !== null && Object.keys(this.props.pictures.todaysPicture).length === 0 && this.props.pictures.todaysPicture.constructor === Object) {
+    if (picture !== null && Object.keys(picture).length === 0 && picture.constructor === Object) {
       fakeData = <h1> Picture Loading! </h1>
     }
     else {
       fakeData = <div className="todaysPicture"> 
-        {/* <SearchByDate fetchSearchByDatePicture={this.props.fetchSearchByDatePicture} />  */}
-        <Picture picture={this.props.pictures.todaysPicture} />
+      { picture.media_type == 'video' ? <AstronomyVideo picture={picture} /> : <Picture picture={picture} /> }
       </div>
     }
       

@@ -15,12 +15,12 @@ export default function pictureReducer (state = {
           todaysPicture: action.picture
         }
       )
-      case 'ADDING_SEARCHED_PHOTO' : 
-      (
-        {...state,
-          todaysPicture: action.picture
-        }
-      )
+    // case 'ADDING_SEARCHED_PHOTO' : 
+    //   (
+    //     {...state,
+    //       searchResults: action.picture
+    //     }
+    //   )
 
       return 
     case 'FETCH_LAST_THIRTY_DAYS' : 

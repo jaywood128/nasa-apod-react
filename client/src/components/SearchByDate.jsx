@@ -1,37 +1,42 @@
 import React from 'react'
-
 class SearchByDate extends React.Component { 
-  
-    state = {
-      searchByDate: ''
-    }
+  constructor(props) {
+    super(props)
+    this.state = {query: ''}
+
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+  }
 
   handleSubmit = (event) => {
-    let date = this.state 
+    
     event.preventDefault()
-    this.props.fetchSearchByDatePicture(date)
+    this.props.fetchSearchByDatePicture(this.state.query)
     this.setState({
-      searchByDate: '',
+      query: '',
     });
   }
 
   handleChange =(event) => {
+    debugger
     this.setState({
-      searchByDate: event.target.value 
+      query: event.target.value 
     })
   }
 
   render() {
     return (
-      <div> 
-        <form onSubmit={ event => this.handleSubmit(event)}> 
-        <input
-          type="text"
-          value={this.state.searchDate}
-          onChange={this.handleChange}
-        />
-        </form>
-      </div>
+
+      // <div className="mx-auto"> 
+      //   <label>Search Pictures by Date (YYYY-MM-DD)</label>
+      //     <div className="col-xs-3 text-right">
+            <div> 
+              <form onSubmit={this.handleSubmit} className="form-inline"> 
+                <input  type="text" value={this.state.query} onChange={this.handleChange}/>
+            </form>
+             {this.state.query}
+           </div>
+        // </div>
     )
   }
 }

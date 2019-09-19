@@ -14,11 +14,12 @@ class AstronomyPicturesLastThirtyDaysContainer extends  React.Component{
   }
   
   render () {
+    const pictures = this.props.pictures.pictures
    return(
      <div> 
       { 
-        (this.props.pictures.pictures.length !== 0) ? 
-          <AstronomyPictureCarousel pictures={this.props.pictures.pictures} />
+        (pictures.length !== 0) ? 
+          <AstronomyPictureCarousel pictures={pictures} />
         : <h3> Loading Carousel </h3>
       }
      </div>
