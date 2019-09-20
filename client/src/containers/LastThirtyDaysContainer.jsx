@@ -1,9 +1,9 @@
 import React from 'react'
 import { fetchLastThirtyDays } from '../actions/fetchLastThirtyDays';
 import { connect } from 'react-redux';
-import AstronomyPictureCarousel from './AstronomyPictureCarousel'
+import AstronomyPictureCarousel from '../components/AstronomyPictureCarousel'
 
-class AstronomyPicturesLastThirtyDaysContainer extends  React.Component{
+class LastThirtyDaysContainer extends  React.Component{
   
   componentDidMount() {   
    
@@ -34,4 +34,4 @@ function mapStateToProps(state) {
   return {pictures: state.pictures}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(AstronomyPicturesLastThirtyDaysContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(LastThirtyDaysContainer)

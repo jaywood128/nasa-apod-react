@@ -1,12 +1,11 @@
 // client/src/components/PostList.jsx
 import React, { Component }               from 'react'
 import { Link }                           from 'react-router-dom'
-import AstronomyPictures from './AstronomyPictures'
 import { connect } from 'react-redux'
 import { fetchPicture } from '../actions/fetchPicture'
-import Picture from './Picture'
-import FavoriteToggle from './FavoriteToggle'
-import AstronomyVideo from './AstronomyVideo'
+import Picture from '../components/Picture'
+import FavoriteToggle from '../components/FavoriteToggle'
+import AstronomyVideo from '../components/AstronomyVideo'
 
 class AstronomyPictureContainer extends Component {
   constructor(props) {

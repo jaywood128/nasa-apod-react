@@ -1,10 +1,10 @@
 import React, { Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import AstronomyPictureContainer from './components/AstronomyPictureContainer';
-import SearchByDateContainer from './components/SearchByDateContainer';
+import AstronomyPictureContainer from './containers/AstronomyPictureContainer';
+import SearchByDateContainer from './containers/SearchByDateContainer';
 import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-router-dom';
-import AstronomyPicturesLastThirtyDaysContainer from './components/AstronomyPicturesLastThirtyDaysContainer'
+import LastThirtyDaysContainer from './containers/LastThirtyDaysContainer'
 // import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
 // import { NoMatch } from './NoMatch';
 import { Fragment } from 'react'
@@ -26,9 +26,9 @@ class App extends Component {
                 <Navbar/>
                   <Switch> 
                     <Route exact path='/app' render={() => <Redirect to="/astronomy_pictures/today"/>}/> 
-                    <Route path='/last_thirty_days' component={AstronomyPicturesLastThirtyDaysContainer}/> 
+                    <Route path='/last_thirty_days' component={LastThirtyDaysContainer}/> 
                     <Route path='/astronomy_pictures/:date' component={AstronomyPictureContainer}/> 
-                    <Route path='/search_astronomy_pictures' component={SearchByDateContainer} /> 
+                    <Route path='/search_astronomy_pictures' render={ props => <SearchByDateContainer/> } /> 
                     {/*this.props.params.date  <Link to="/astronomy_pictures/2019-10-11"></Link> */}
                     {/* <Route component={NoMatch}/>  */}
                   </Switch>
