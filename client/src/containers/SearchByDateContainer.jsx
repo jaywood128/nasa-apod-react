@@ -9,14 +9,13 @@ const VideoOrPicture = (picture) => ( picture.media_type === 'video' ? <Astronom
 
 class SearchByDateContainer extends Component {
 
-  state = {
-    result: {}
-  }
 
   render() {
-    const result = this.state.result ? VideoOrPicture(this.state.result) : null 
+    
+    console.log(Object.keys(this.props.result).length === 0, Object.keys(this.props.result).length)
+    const result = (Object.keys(this.props.result).length !== 0 ) ? VideoOrPicture(this.props.result) : null 
 
-    debugger 
+     
     return(
       <div>
         <h1> Inside container</h1>

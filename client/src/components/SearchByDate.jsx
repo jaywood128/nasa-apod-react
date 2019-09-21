@@ -22,15 +22,13 @@ class SearchByDate extends React.Component {
   render() {
     return (
 
-      // <div className="mx-auto"> 
-      //   <label>Search Pictures by Date (YYYY-MM-DD)</label>
-      //     <div className="col-xs-3 text-right">
             <div className="search-by-date"> 
+            <label>Search Pictures by Date (YYYY-MM-DD)</label>
               <form onSubmit={this.handleSubmit} className="form-inline"> 
                 <input  type="text" value={this.state.query} onChange={event => this.setState({query: event.target.value})}/>
             </form>
            </div>
-        // </div>
+        
     )
   }
 }
