@@ -1,4 +1,3 @@
-import { id } from "postcss-selector-parser";
 
 export function fetchPicture(date) {
   return (dispatch) => {

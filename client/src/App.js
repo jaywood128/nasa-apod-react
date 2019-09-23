@@ -1,5 +1,4 @@
 import React, { Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import AstronomyPictureContainer from './containers/AstronomyPictureContainer';
 import SearchByDateContainer from './containers/SearchByDateContainer';

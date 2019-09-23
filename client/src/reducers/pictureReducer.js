@@ -23,7 +23,6 @@ export default function pictureReducer (state = {
         }
       )
 
-      // return 
     case 'FETCH_LAST_THIRTY_DAYS' : 
    
       return (

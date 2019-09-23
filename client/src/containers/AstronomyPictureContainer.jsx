@@ -6,6 +6,7 @@ import { fetchPicture } from '../actions/fetchPicture'
 import Picture from '../components/Picture'
 import FavoriteToggle from '../components/FavoriteToggle'
 import AstronomyVideo from '../components/AstronomyVideo'
+import  Counter from '../components/Counter'
 
 class AstronomyPictureContainer extends Component {
   constructor(props) {
@@ -52,8 +53,7 @@ function mapStateToProps(state) {
   return { pictures: state.pictures }
 }
 const mapDispatchToProps = dispatch => ({
-  fetchPicture: (date)=> dispatch(fetchPicture(date)), 
-  fetchSearchByDatePicture: ()=> dispatch(fetchSearchByDatePicture())
+  fetchPicture: (date)=> dispatch(fetchPicture(date))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(AstronomyPictureContainer)
