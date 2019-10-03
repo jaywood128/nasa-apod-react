@@ -17,6 +17,7 @@
     "react": "^16.9.0",
     "react-bootstrap": "^1.0.0-beta.12",
     "react-dom": "^16.9.0",
+    "react-redux": "^7.1.1",
     "react-responsive-carousel": "^3.1.50",
     "react-router-dom": "^5.0.1",
     "redux-logger": "^3.0.6",
@@ -30,8 +31,8 @@
     "webpack-dev-server": "^3.8.0"
   },
   "scripts": {
-    "build": "npm --cwd client install && npm --cwd client build",
+    "build": "yarn --cwd client install && yarn --cwd client build",
     "deploy": "cp -a client/build/. public/",
-    "heroku-postbuild": "npm build && npm deploy"
+    "heroku-postbuild": "yarn build && yarn deploy"
   }
 }
