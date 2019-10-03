@@ -6,7 +6,10 @@ import { fetchPicture } from '../actions/fetchPicture'
 import Picture from '../components/Picture'
 import FavoriteToggle from '../components/FavoriteToggle'
 import AstronomyVideo from '../components/AstronomyVideo'
-import  Counter from '../components/Counter'
+import Counter from '../components/Counter'
+import Clock from '../components/Clock'
+import Loader from '../components/Loader'
+let loading = <h1> Picture loading... </h1> 
 
 class AstronomyPictureContainer extends Component {
   constructor(props) {
@@ -20,25 +23,28 @@ class AstronomyPictureContainer extends Component {
     var yyyy = today.getFullYear();
     
     let date = yyyy + '-' + mm + '-' + dd; 
-    // const todays_picture = this.props.pictures.pictures.filter(day => day.date === todays_date);
    
     if (Object.keys(this.props.pictures.todaysPicture).length === 0 && this.props.pictures.todaysPicture.constructor === Object) {
   
       this.props.fetchPicture(this.props.match.params.date)
     }
+
   
   }
   render() {
     let picture = this.props.pictures.todaysPicture
     let fakeData
-    if (picture !== null && Object.keys(picture).length === 0 && picture.constructor === Object) {
+    debugger
+    if (Object.keys(picture).length === 0 && picture.constructor === Object) {
+      debugger  
       fakeData = <h1> Picture Loading! </h1>
-    }
-    else {
+    } else {
       fakeData = <div className="todaysPicture"> 
-      { picture.media_type == 'video' ? <AstronomyVideo picture={picture} /> : <Picture picture={picture} /> }
+      <Counter /> 
+      { picture.media_type == 'video' ? <AstronomyVideo picture={picture} /> : <Picture picture={picture} /> } 
+      <Clock/> 
       </div>
-    }
+    }  
       
     return (
       <div>
@@ -48,8 +54,7 @@ class AstronomyPictureContainer extends Component {
   }
 }
 
-function mapStateToProps(state) {
-   
+function mapStateToProps(state) { 
   return { pictures: state.pictures }
 }
 const mapDispatchToProps = dispatch => ({
@@ -57,3 +62,4 @@ const mapDispatchToProps = dispatch => ({
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(AstronomyPictureContainer)
+

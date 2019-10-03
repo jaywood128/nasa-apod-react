@@ -28,5 +28,10 @@
     "eslint-plugin-react-hooks": "^2.0.1",
     "redux-devtools-extension": "^2.13.8",
     "webpack-dev-server": "^3.8.0"
+  },
+  "scripts": {
+    "build": "npm --cwd client install && npm --cwd client build",
+    "deploy": "cp -a client/build/. public/",
+    "heroku-postbuild": "npm build && npm deploy"
   }
 }
