@@ -19,7 +19,7 @@
     "typescript": "^2.8.0"
   },
   "engines": {
-    "node": "12.10.0",
+    "node": "12.7.0",
     "yarn": "1.19.0"
   },
   "scripts": {
