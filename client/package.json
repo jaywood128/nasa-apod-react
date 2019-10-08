@@ -19,6 +19,10 @@
     "semantic-ui-react": "^0.88.1",
     "typescript": "^2.8.0"
   },
+  "engines": {
+    "node": "12.10.0",
+    "yarn": "1.19.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
