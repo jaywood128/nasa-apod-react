@@ -7,7 +7,7 @@ import { createStore, compose, applyMiddleware, combineReducers } from 'redux';
 import logger from 'redux-logger'
 import thunk from 'redux-thunk';
 import rootReducer from './reducers/index.js'
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(
