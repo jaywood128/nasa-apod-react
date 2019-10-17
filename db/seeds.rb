@@ -30,9 +30,9 @@ astromony_pictures = [
 
 ]
 
-@comment = Comment.create(content: "I can see the Orion!")
-astromony_pictures.each do |picture| 
-  AstronomyPicture.create(picture)
-end  
+# @comment = Comment.create(content: "I can see the Orion!")
+# astromony_pictures.each do |picture| 
+#   AstronomyPicture.create(picture)
+# end  
 
 
