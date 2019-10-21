@@ -1,6 +1,6 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { fetchAddAstronomyPictureToFavorites } from './fetchAddAstronomyPictureToFavorites'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { fetchAddAstronomyPictureToFavorites } from './fetchAddAstronomyPictureToFavorites'
 class FavoriteToggle extends React.Component {
   constructor(props) {
     super(props);
@@ -24,7 +24,7 @@ class FavoriteToggle extends React.Component {
     return (
         <div> 
       <button onClick={this.handleClick}>
-        {this.state.isFavorited ? <FontAwesomeIcon onClick={this.handleClick} size="2x" icon={['fa', 'heart']} color="#ffd700"/> : <FontAwesomeIcon size="2x" icon={['far', 'heart']} color="#ffd700" />  }
+        {/* {this.state.isFavorited ? <FontAwesomeIcon onClick={this.handleClick} size="2x" icon={['fa', 'heart']} color="#ffd700"/> : <FontAwesomeIcon size="2x" icon={['far', 'heart']} color="#ffd700" />  } */}
       </button>
         </div> 
     );
