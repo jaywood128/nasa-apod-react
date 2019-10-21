@@ -10,11 +10,12 @@ import Counter from '../components/Counter'
 import Clock from '../components/Clock'
 import Loader from '../components/Loader'
 let loading = <h1> Picture loading... </h1> 
+// 
 
 class AstronomyPictureContainer extends Component {
-  constructor(props) {
-    super()
-  }
+  // constructor(props) {
+  //   super()
+  // }
   
   componentDidMount() {
     var today = new Date();
@@ -25,24 +26,25 @@ class AstronomyPictureContainer extends Component {
     let date = yyyy + '-' + mm + '-' + dd; 
    
     if (Object.keys(this.props.pictures.todaysPicture).length === 0 && this.props.pictures.todaysPicture.constructor === Object) {
-  
+      debugger 
       this.props.fetchPicture(this.props.match.params.date)
     }
 
   
   }
   render() {
-    let picture = this.props.pictures.todaysPicture
     let fakeData
-    debugger
+    let picture = this.props.pictures.todaysPicture
+    
     if (Object.keys(picture).length === 0 && picture.constructor === Object) {
-      debugger  
+      
       fakeData = <h1> Picture Loading! </h1>
     } else {
+      debugger 
       fakeData = <div className="todaysPicture"> 
-      <Counter /> 
+     
       { picture.media_type == 'video' ? <AstronomyVideo picture={picture} /> : <Picture picture={picture} /> } 
-      <Clock/> 
+      
       </div>
     }  
       
