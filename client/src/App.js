@@ -23,15 +23,15 @@ class App extends Component {
     return (
             <Router>
                 <Navbar/>
-                  <Switch> 
-                    <Route exact path='/app' render={() => <Redirect to="/astronomy_pictures/today"/>}/> 
-                    <Route path='/last_thirty_days' component={LastThirtyDaysContainer}/> 
-                    <Route path='/astronomy_pictures/:date' component={AstronomyPictureContainer}/> 
-                    <Route path='/search_astronomy_pictures' render={ props => <SearchByDateContainer/> } /> 
+                  <Switch>
+                    <Route exact path='/app' render={() => <Redirect to="/astronomy_pictures/today"/>}/>
+                    <Route path='/last_thirty_days' component={LastThirtyDaysContainer}/>
+                    <Route path='/astronomy_pictures/:date' component={AstronomyPictureContainer}/>
+                    <Route path='/search_astronomy_pictures' render={ props => <SearchByDateContainer/> } />
                     {/*this.props.params.date  <Link to="/astronomy_pictures/2019-10-11"></Link> */}
                     {/* <Route component={NoMatch}/>  */}
                   </Switch>
-              </Router> 
+              </Router>
     );
   }
 }
