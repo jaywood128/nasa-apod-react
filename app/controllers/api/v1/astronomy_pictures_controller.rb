@@ -20,13 +20,13 @@ module Api
        
         if @todays_picture == nil 
           AstronomyPicture.create_todays_picture(date)
-          binding.pry
+          
         end 
         render json: @todays_picture.to_json 
       end 
 
       def search 
-        binding.pry
+       
       end 
 
       def index   
