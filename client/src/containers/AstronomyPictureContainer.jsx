@@ -22,9 +22,9 @@ class AstronomyPictureContainer extends Component {
     var yyyy = today.getFullYear();
     
     let date = yyyy + '-' + mm + '-' + dd; 
-   debugger
+   
     if (Object.keys(this.props.pictures.todaysPicture).length === 0 && this.props.pictures.todaysPicture.constructor === Object) {
-     
+     console.log("Inside first if statement")
       this.props.fetchPicture(this.props.match.params.date)
     }
 
@@ -33,21 +33,26 @@ class AstronomyPictureContainer extends Component {
   render() {
     let fakeData
     let picture = this.props.pictures.todaysPicture
-    
-    if (this.props.pictures.todaysPicture) {
        
-      fakeData = <div className="todaysPicture"> 
+    //   fakeData = <div className="todaysPicture"> 
      
-      { picture.media_type == 'video' ? <AstronomyVideo picture={picture} /> : <Picture picture={picture} /> } 
+    //   { picture.media_type == 'video' ? <AstronomyVideo picture={picture} /> : <Picture picture={picture} /> } 
       
-      </div>
-    } else {
-      fakeData = <h1> Picture Loading! </h1>
-    }  
+    //   </div>
+    // } else {
+    //   fakeData = <h1> Picture Loading! </h1>
+    // { 
+    //   (pictures.length !== 0) ? 
+    //     <AstronomyPictureCarousel pictures={pictures} />
+    //   : <h3> Loading Carousel </h3>
+    // }
+    // }  
       
     return (
       <div>
-        {fakeData}
+        {
+     (this.props.pictures.todaysPicture) ?  <Picture picture={picture} /> : <h1> Picture Loading! </h1>
+      }
       </div>
     )
   }
