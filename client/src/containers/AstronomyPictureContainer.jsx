@@ -13,9 +13,7 @@ let loading = <h1> Picture loading... </h1>
 // 
 
 class AstronomyPictureContainer extends Component {
-  // constructor(props) {
-  //   super()
-  // }
+
   
   componentDidMount() {
     var today = new Date();
@@ -24,9 +22,9 @@ class AstronomyPictureContainer extends Component {
     var yyyy = today.getFullYear();
     
     let date = yyyy + '-' + mm + '-' + dd; 
-   
+   debugger
     if (Object.keys(this.props.pictures.todaysPicture).length === 0 && this.props.pictures.todaysPicture.constructor === Object) {
-      debugger 
+     
       this.props.fetchPicture(this.props.match.params.date)
     }
 
@@ -36,16 +34,15 @@ class AstronomyPictureContainer extends Component {
     let fakeData
     let picture = this.props.pictures.todaysPicture
     
-    if (Object.keys(picture).length === 0 && picture.constructor === Object) {
-      
-      fakeData = <h1> Picture Loading! </h1>
-    } else {
-      debugger 
+    if (this.props.pictures.todaysPicture) {
+       
       fakeData = <div className="todaysPicture"> 
      
       { picture.media_type == 'video' ? <AstronomyVideo picture={picture} /> : <Picture picture={picture} /> } 
       
       </div>
+    } else {
+      fakeData = <h1> Picture Loading! </h1>
     }  
       
     return (
