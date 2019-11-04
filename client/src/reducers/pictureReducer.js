@@ -1,13 +1,12 @@
 export default function pictureReducer (state = {
   pictures: [], todaysPicture: {}, result: {}
 }, action) {
-  debugger 
+  
   switch(action.type) {
     case 'PICTURE_LOADING' :
       return (
-      //   {...state, 
-      //   pictures: [...state.pictures, state.todaysPicture]}
-        {...state}
+        {...state, 
+        }
       )
     case 'FETCH_TODAYS_PHOTO' :     
       return (
@@ -16,7 +15,6 @@ export default function pictureReducer (state = {
         }
       )
     case 'ADDING_SEARCHED_PHOTO' : 
-    debugger
       return (
         {...state,
           result: action.picture

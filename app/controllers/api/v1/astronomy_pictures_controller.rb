@@ -19,10 +19,11 @@ module Api
         @todays_picture = AstronomyPicture.find_by(date: date)
        
         if @todays_picture == nil 
-          AstronomyPicture.create_todays_picture(date)
+          @todays_picture = AstronomyPicture.create_todays_picture(date)
           
         end 
-        render json: @todays_picture.to_json 
+       
+        render json: @todays_picture
       end 
 
       def search 
