@@ -1,6 +1,16 @@
 .App {
   text-align: center;
 }
+.container {
+	text-align: center;
+	font-size: 1.8em
+}
+#carousel {
+	font-size: 1.4em
+}
+.slider-wrapper axis-horizontal {
+	font-size: 1.4em
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;

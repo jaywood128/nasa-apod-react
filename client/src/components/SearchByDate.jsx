@@ -22,12 +22,11 @@ class SearchByDate extends React.Component {
   render() {
     return (
 
-            <div className="search-by-date"> 
-            <label>Search Pictures by Date (YYYY-MM-DD)</label>
+          <div className="container"> 
               <form onSubmit={this.handleSubmit} className="form-inline"> 
                 <input  type="text" value={this.state.query} onChange={event => this.setState({query: event.target.value})}/>
-            </form>
-           </div>
+              </form>
+          </div>
         
     )
   }

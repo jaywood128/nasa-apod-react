@@ -12,14 +12,14 @@ class SearchByDateContainer extends Component {
 
   render() {
     
-    console.log(Object.keys(this.props.result).length === 0, Object.keys(this.props.result).length)
+    
     const result = (Object.keys(this.props.result).length !== 0 ) ? VideoOrPicture(this.props.result) : null 
 
      
     return(
-      <div>
-        <h1> Inside container</h1>
-        <SearchByDate fetchSearchedPicture={this.props.fetchSearchedPicture} />
+      <div className="container">
+        <label>Search by Date (YYYY-MM-DD)</label>
+          <SearchByDate fetchSearchedPicture={this.props.fetchSearchedPicture} />
         {result}
       </div>
     )
