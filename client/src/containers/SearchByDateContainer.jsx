@@ -18,7 +18,11 @@ class SearchByDateContainer extends Component {
      
     return(
       <div className="container">
+        <br></br>
+        <br></br>
         <label>Search by Date (YYYY-MM-DD)</label>
+        <br></br>
+        <br></br>
           <SearchByDate fetchSearchedPicture={this.props.fetchSearchedPicture} />
         {result}
       </div>

@@ -26,6 +26,9 @@ class SearchByDate extends React.Component {
               <form onSubmit={this.handleSubmit} className="form-inline"> 
                 <input  type="text" value={this.state.query} onChange={event => this.setState({query: event.target.value})}/>
               </form>
+                <br></br>
+                  <br></br>
+                    <br></br>
           </div>
         
     )

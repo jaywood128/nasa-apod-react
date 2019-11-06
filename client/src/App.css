@@ -1,15 +1,22 @@
 .App {
   text-align: center;
 }
-.container {
+div.container {
 	text-align: center;
 	font-size: 1.8em
+}
+input[type="text"] {
+	display: block;
+	margin : 0 auto;
 }
 #carousel {
 	font-size: 1.4em
 }
 .slider-wrapper axis-horizontal {
 	font-size: 1.4em
+}
+.form-inline {
+	white-space: pre
 }
 
 .App-logo {
