@@ -17,26 +17,25 @@
    text-indent: 500px;
    text-align: center;
 }
-nav {
-	font-size: x-large;
-}
+nav { font-size: x-large;}
 
-
-	body{
+body{
 		color: #fff;
 		background: #3598dc;
     font-family: 'Roboto', sans-serif;
     text-align: center;
-	}
-    .form-control{
+	 }
+
+.form-control{
 		height: 41px;
 		background: #f2f2f2;
 		box-shadow: none !important;
 		border: none;
-	}
-	.form-control:focus{
+}
+
+.form-control:focus{
 		background: #e2e2e2;
-	}
+}
     .form-control, .btn{        
         border-radius: 3px;
     }
