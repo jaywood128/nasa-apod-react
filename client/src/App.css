@@ -132,3 +132,5 @@ html, body { height:100%; }
   cursor: pointer;
   text-align: center;
 }
+
+.carousel .slide .legend {font-size: 25px !important }
