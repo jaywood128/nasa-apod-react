@@ -6,7 +6,6 @@ import { fetchPicture } from '../actions/fetchPicture'
 import Picture from '../components/Picture'
 import FavoriteToggle from '../components/FavoriteToggle'
 import AstronomyVideo from '../components/AstronomyVideo'
-import Counter from '../components/Counter'
 import Clock from '../components/Clock'
 import Loader from '../components/Loader'
 let loading = <h1> Picture loading... </h1> 

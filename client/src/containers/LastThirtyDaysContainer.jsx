@@ -8,7 +8,7 @@ class LastThirtyDaysContainer extends  React.Component{
   componentDidMount() {   
    
     if (this.props.pictures.pictures.length === 0) {
-      console.log(this.props)
+      
       this.props.fetchLastThirtyDays()
     }
   }

@@ -9,7 +9,7 @@ NasaApodReact::Application.load_tasks
 module Api 
   module V1
     class AstronomyPicturesController < ApplicationController
-
+      # protect_from_forgery with: :null_session
       def show 
      
         time = Time.new 
