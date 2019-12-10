@@ -6,8 +6,8 @@ class ApplicationController < ActionController::Base
     app_path 
   end
 
-  def after_sign_up_path_for(resource)
-    app_path 
-  end
+  # def after_sign_up_path_for(resource)
+  #   app_path 
+  # end
 
 end

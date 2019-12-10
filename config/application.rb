@@ -10,6 +10,7 @@ module NasaApodReact
   class Application < Rails::Application
     config.api_only = true
     config.middleware.use ActionDispatch::Flash
+    config.paths['app/views'] << "app/views/devise"
     
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
