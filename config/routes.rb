@@ -10,7 +10,7 @@
       resources :users 
         get '/add_picture_to_favorites/:date', to: 'users#create'
     end 
-    # resources :users 
+   
   end
 
   devise_for :users, controllers: { registrations: "registrations" }
