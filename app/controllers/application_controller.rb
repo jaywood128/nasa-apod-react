@@ -1,7 +1,8 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery prepend: true
+  # protect_from_forgery prepend: true
   skip_before_action :verify_authenticity_token
-  # before_action :authenticate_user!, except: [:home, :create, :new]
+  before_action :authenticate_user!, only: [:app]
+
   def after_sign_in_path_for(resource)
     app_path 
   end

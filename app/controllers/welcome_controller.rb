@@ -5,6 +5,5 @@ class WelcomeController < ApplicationController
   end
 
   def app
-    binding.pry
   end
 end
