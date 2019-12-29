@@ -13,14 +13,16 @@
    
   end
 
-  devise_for :users, controllers: { registrations: "registrations", sessiions: "sessions" }
+  devise_for :users, controllers: { registrations: "registrations" }  
     get 'welcome/home'
     get '/app', to: 'welcome#app', as: 'app'
     # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
     
     get '*path' => redirect('/')
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  end
+
+
+end
 
 
 
