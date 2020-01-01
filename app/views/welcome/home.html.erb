@@ -1,11 +1,19 @@
+<!DOCTYPE> 
 <nav style="text-align: right">
-<% if user_signed_in? %>
+
+</nav>
+
+<h1>DailyCosmos</h1>
+  <div class="landing-page-background-container">
+  <p>Discover HD pictures and videos each day. </p>
+  <p>DailyCosmos utilizes the power of NASA's Astronomy Picture of the Day API</p>
+  <% if user_signed_in? %>
     <%= link_to('Logout', destroy_user_session_path) %>        
   <% else %>
     <%= link_to('Login', new_user_session_path)  %> |
     <%= link_to('Sign Up', new_user_registration_path)  %>  
   <% end %>
-</nav>
-<h1>Search NASA's Astronomy Picture of the Day</h1>
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs3.amazonaws.com%2Fopen-nasa-files%2Fimages%2Fapod1_copy.original.jpg&f=1&nofb=1"> <img/>
+  </div>
  
-<p>If you're logged in, check out <%= link_to "the app", '/app' %>!</p>
+  <p></p>
