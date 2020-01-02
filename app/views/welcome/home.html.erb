@@ -5,12 +5,18 @@
 
 <h1>DailyCosmos</h1>
   <div class="landing-page-background-container">
-  <p>Discover HD pictures and videos each day. </p>
-  <p>DailyCosmos utilizes the power of NASA's Astronomy Picture of the Day API</p>
+  <p>Discover stunning pictures and videos narrated by astronmers </p>
+
+  <p>Harness the power of a NASA's API </p>
+
+  <p> Scroll light years away </p>
+
+  <img src=> <img/>
+
   <% if user_signed_in? %>
     <%= link_to('Logout', destroy_user_session_path) %>        
   <% else %>
-    <%= link_to('Login', new_user_session_path)  %> |
+    <%= link_to('Login', new_user_session_path)  %> ||
     <%= link_to('Sign Up', new_user_registration_path)  %>  
   <% end %>
     <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs3.amazonaws.com%2Fopen-nasa-files%2Fimages%2Fapod1_copy.original.jpg&f=1&nofb=1"> <img/>

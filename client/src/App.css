@@ -9,9 +9,24 @@ input[type="text"] {
 	display: block;
 	margin : 0 auto;
 }
+
 #carousel {
-	font-size: 1.4em
+font-size: 1.4em;
+/* width: 100%;
+height: 280px; */
 }
+
+/* #carousel .img {
+	width: 100% !important;
+	height: auto !important;
+} */
+.carousel .slide .legend {font-size: 25px !important }
+
+.carousel .slide .img {
+	width: 100% !important;
+	height: auto!important;
+}
+
 .slider-wrapper axis-horizontal {
 	font-size: 1.4em
 }
@@ -133,4 +148,3 @@ html, body { height:100%; }
   text-align: center;
 }
 
-.carousel .slide .legend {font-size: 25px !important }
