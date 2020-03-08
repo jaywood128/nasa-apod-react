@@ -23,8 +23,6 @@ class AstronomyPictureContainer extends Component {
     let date = yyyy + '-' + mm + '-' + dd; 
    
     if (Object.keys(this.props.pictures.todaysPicture).length === 0 && this.props.pictures.todaysPicture.constructor === Object) {
-     console.log("Inside first if statement")
-  
       this.props.fetchPicture(this.props.match.params.date)
     }
 
@@ -34,7 +32,7 @@ class AstronomyPictureContainer extends Component {
     let fakeData
     let picture = this.props.pictures.todaysPicture
    
-       if (picture) {
+    if (picture) {
       fakeData = <div className="todaysPicture"> 
      
       { picture.media_type == 'video' ? <AstronomyVideo picture={picture} /> : <Picture picture={picture} /> } 

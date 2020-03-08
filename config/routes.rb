@@ -17,8 +17,8 @@
     get 'welcome/home'
     get '/app', to: 'welcome#app', as: 'app'
     # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-    
-    get '*path' => redirect('/')
+    get 'users_signout' => redirect('/')
+    get '*path' => redirect('/app')
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
 

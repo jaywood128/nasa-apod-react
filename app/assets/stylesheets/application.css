@@ -18,9 +18,14 @@
    text-align: center;
 }
 .landing-page-background-container{
-	width: 100%;
+	width: 50%;
   height: 480px;
 }
+.devise-login-continer{
+	margin: 0 auto !important;
+	width: 50%;
+}
+
 .landing-page-background-container img {
 	width: 100% !important;
 	height: auto !important;
@@ -33,7 +38,7 @@ body{
 		background: #3598dc;
     font-family: 'Roboto', sans-serif;
 		text-align: center;
-		background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs3.amazonaws.com%2Fopen-nasa-files%2Fimages%2Fapod1_copy.original.jpg&f=1&nofb=")
+		/* background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs3.amazonaws.com%2Fopen-nasa-files%2Fimages%2Fapod1_copy.original.jpg&f=1&nofb=") */
 	 }
 
 .form-control{

@@ -11,7 +11,7 @@ class SearchByDate extends React.Component {
   handleSubmit = (event) => {
     
     event.preventDefault()
-   console.log(this.props)
+  
    if (!this.state.query) return 
     this.props.fetchSearchedPicture(this.state.query)
     this.setState({

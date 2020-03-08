@@ -17,7 +17,7 @@ const getToday = "todays day"
         <Link className="nav-link" to="/search_astronomy_pictures">Search</Link>
       </li>
     </ul>
-  <a href="/users_signout"> Sign out </a>
+  <a className="btn btn-success" href="/users_signout"> Sign out </a>
   </div>
 </nav>
 )
