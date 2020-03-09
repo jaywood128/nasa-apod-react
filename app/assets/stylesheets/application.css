@@ -13,6 +13,46 @@
  *= require_tree .
  *= require_self
  */
+ /* .login-sign-up-container{right: 0;} */
+ #login-logout-button { right: 0;}
+
+ .landing-page-background-container{ 
+		margin-left: auto;
+		margin-right: auto;
+		width: 100% !important;
+	}
+
+ .image-flex-container{ 
+	 display: flex;
+	 /* flex-wrap: wrap; */
+	 align-items: flex-start;
+	 flex-direction: row;
+	 margin-left: 0;
+	width: 50%; 
+	height: 50%;
+	 }
+
+	#flex-image {
+		width: 50px !important;
+		height: 50px !important;
+	}
+
+.login-sign-up-container { 
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 100%; 
+	padding: 0px 15px;
+}
+.login-sign-up-container a{ 
+	padding: 0px 15px;
+	width: auto;
+}
+#or{ padding: 0px 15px;}
+
+
+ .navbar .a #login-logout-button { right: 0;}
+
 .div {
    text-indent: 500px;
    text-align: center;

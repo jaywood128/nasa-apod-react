@@ -1,6 +1,14 @@
-<!DOCTYPE> 
-<nav style="text-align: right">
-
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">About</a>
+    <a class="navbar-brand" to="/last_thirty_days">Features</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="login-sign-up-container"> 
+      <a class="btn btn-success btn-md" href="/users/sign_in"> Login </a>
+      <h2 id="or">or</h2>
+      <a class="btn btn-success btn-md" href="/users/sign_up">Signup</a>
+    </div> 
 </nav>
 
 <h1>DailyCosmos</h1>
@@ -19,7 +27,14 @@
     <%= link_to('Login', new_user_session_path)  %> ||
     <%= link_to('Sign Up', new_user_registration_path)  %>  
   <% end %>
-    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs3.amazonaws.com%2Fopen-nasa-files%2Fimages%2Fapod1_copy.original.jpg&f=1&nofb=1"> <img/>
+    <div class="image-flex-container">
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs3.amazonaws.com%2Fopen-nasa-files%2Fimages%2Fapod1_copy.original.jpg&f=1&nofb=1"> <img/>
+      <%= image_tag('M57Ring_HubbleGendler_3000_dailycosmos_picture_3.jpg') %>
+      <%= image_tag("ArcticGeminid_Sutie_1080_dailycosmos_picture_1.jpg")%>
+      <%= image_tag("MayanMilkyWay_Fernandez_1080_annotated_dailycosmos_picture_4.jpg")%>
+      <%= image_tag("ZodiacalMw_Ponca_960_dailycosmos_picture_2.jpeg")%>
+      <%= image_tag("CarEarth_SpaceX_1080_dailycosmos_picture_5.jpeg")%>
+    </div> 
   </div>
  
   <p></p>

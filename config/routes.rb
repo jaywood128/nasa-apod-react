@@ -1,5 +1,6 @@
  Rails.application.routes.draw do
   root 'welcome#home'
+  get 'users_signout' => redirect("/")
   resources :comments
   namespace :api do 
     namespace :v1 do 
@@ -14,13 +15,13 @@
   end
 
   devise_for :users, controllers: { registrations: "registrations" }  
-    get 'welcome/home'
-    get '/app', to: 'welcome#app', as: 'app'
-    # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-    get 'users_signout' => redirect('/')
-    get '*path' => redirect('/app')
+      get 'welcome/home'
+      get '/app', to: 'welcome#app', as: 'app'
+      # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+      # get 'users_signout' => redirect('/')
+      get '*path' => redirect('/app')
+    
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-
 
 end
 
