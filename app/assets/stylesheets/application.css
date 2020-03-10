@@ -14,13 +14,40 @@
  *= require_self
  */
  /* .login-sign-up-container{right: 0;} */
+
+ :root{
+	 --font-family: "Lato", sans-serif;
+ }
+
+ .heading-primary-main {
+	 color: white; 
+	 line-height: 1.7;
+ }
+ .landing-page-header {
+	 /* background-image: url('M57Ring_HubbleGendler_3000_dailycosmos_picture_3.jpg') !important; */
+	 width: 400px;
+	 height: 400px;
+ }
  #login-logout-button { right: 0;}
 
  .landing-page-background-container{ 
+		background-image: url('M57Ring_HubbleGendler_3000_dailycosmos_picture_3.jpg');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
 		margin-left: auto;
 		margin-right: auto;
 		width: 100% !important;
 	}
+
+	.join-now-link {
+		background-color: white;
+		border-radius: 25px;
+		border: 2px solid black;
+		font-size: small;
+	}
+
+	.join-now-link a { color: white !important}
 
  .image-flex-container{ 
 	 display: flex;
@@ -74,8 +101,7 @@
 nav { font-size: x-large;}
 
 body{
-		color: #fff;
-		background: #3598dc;
+		background-color: #fff;
     font-family: 'Roboto', sans-serif;
 		text-align: center;
 		/* background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs3.amazonaws.com%2Fopen-nasa-files%2Fimages%2Fapod1_copy.original.jpg&f=1&nofb=") */
