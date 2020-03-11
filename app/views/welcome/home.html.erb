@@ -1,15 +1,8 @@
 <header> </header>
   <div class="landing-page-background-container">
     <h1 class="heading-primary-main">CosmosDaily</h1>
-      <!-- <header class="landing-page-header"> --> 
-      <!--<img src="M57Ring_HubbleGendler_3000_dailycosmos_picture_3.jpg"> -->
-    <!--</header>-->
-    <%= link_to('Join now', new_user_registration_path, class: "join-now-link")  %>  
   </div>
-  <% if user_signed_in? %>
-     <%= link_to('Logout', destroy_user_session_path) %>        
-    <% else %>
-     <%= link_to('Login', new_user_session_path)  %> ||
-   <% end %>
- 
-  <p></p>
+    <div class="sign-up-container">
+        <a style="float:left" class="btn btn-dark btn-md" href="/users/sign_up">Signup</a> <h2>or</h2><a style="float:right" class="btn btn-dark btn-md" href="/users/log_in">Login</a>
+    </div> 
+    

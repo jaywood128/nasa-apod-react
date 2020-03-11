@@ -22,6 +22,10 @@
  .heading-primary-main {
 	 color: white; 
 	 line-height: 1.7;
+	 position: absolute;
+   top: 25%;
+   left: 50%;
+   transform: translate(-50%, -50%);
  }
  .landing-page-header {
 	 /* background-image: url('M57Ring_HubbleGendler_3000_dailycosmos_picture_3.jpg') !important; */
@@ -32,12 +36,14 @@
 
  .landing-page-background-container{ 
 		background-image: url('M57Ring_HubbleGendler_3000_dailycosmos_picture_3.jpg');
-		background-size: contain;
+		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
-		margin-left: auto;
-		margin-right: auto;
+		/* margin-left: auto;
+		margin-right: auto; */
 		width: 100% !important;
+		text-align: center;
+  	color: white;
 	}
 
 	.join-now-link {
@@ -46,6 +52,25 @@
 		border: 2px solid black;
 		font-size: small;
 	}
+
+	.sign-up-container{ 
+		margin: auto !important;
+		text-align: center !important;
+		white-space: nowrap !important;
+	 }
+
+	 .btn, .btn:link { 
+		margin: auto !important;
+		text-align: center !important;
+		margin-left: 450px !important;
+		margin-right: 450px !important;
+		line-height: 1;
+		margin-top: 100px !important;
+		background-color: black !important;
+		width: 200px !important;
+		display: inline-block !important;
+		
+	 }
 
 	.join-now-link a { color: white !important}
 
@@ -102,7 +127,8 @@ nav { font-size: x-large;}
 
 body{
 		background-color: #fff;
-    font-family: 'Roboto', sans-serif;
+		font-family: "Optima", sans-serif;
+		font-weight: 500;
 		text-align: center;
 		/* background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs3.amazonaws.com%2Fopen-nasa-files%2Fimages%2Fapod1_copy.original.jpg&f=1&nofb=") */
 	 }
