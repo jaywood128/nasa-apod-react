@@ -74,6 +74,8 @@
 		display: inline-block !important;
 	 }
 
+	 section { margin-top: 30px;}
+
 	.join-now-link a { color: white !important}
 
  .image-flex-container{ 
@@ -112,6 +114,14 @@
 	width: 50%;
   height: 400px;
 }
+
+.carousel {
+  width: 800px !important;
+	height:360px !important;
+	margin: auto !important;
+	margin-top: 30px !important;
+}
+
 .devise-login-continer{
 	margin: 0 auto !important;
 	width: 50%;
