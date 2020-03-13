@@ -59,17 +59,19 @@
 		white-space: nowrap !important;
 	 }
 
+	 .sign-up-container > h2 {
+	display: inline-block !important;
+	 }
+
 	 .btn, .btn:link { 
 		margin: auto !important;
 		text-align: center !important;
-		margin-left: 450px !important;
-		margin-right: 450px !important;
-		line-height: 1;
-		margin-top: 100px !important;
+		margin-left: 10% !important;
+		margin-right: 10% !important;
+		line-height: 2.0;
 		background-color: black !important;
 		width: 200px !important;
 		display: inline-block !important;
-		
 	 }
 
 	.join-now-link a { color: white !important}
@@ -91,19 +93,16 @@
 
 .login-sign-up-container { 
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
 	align-items: center;
 	width: 100%; 
 	padding: 0px 15px;
+	text-align: center;
 }
 .login-sign-up-container a{ 
 	padding: 0px 15px;
 	width: auto;
 }
-#or{ padding: 0px 15px;}
-
-
- .navbar .a #login-logout-button { right: 0;}
 
 .div {
    text-indent: 500px;
@@ -111,7 +110,7 @@
 }
 .landing-page-background-container{
 	width: 50%;
-  height: 480px;
+  height: 400px;
 }
 .devise-login-continer{
 	margin: 0 auto !important;
@@ -130,6 +129,7 @@ body{
 		font-family: "Optima", sans-serif;
 		font-weight: 500;
 		text-align: center;
+		margin: 0;
 		/* background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs3.amazonaws.com%2Fopen-nasa-files%2Fimages%2Fapod1_copy.original.jpg&f=1&nofb=") */
 	 }
 
