@@ -14,7 +14,7 @@ const Picture = (picture) => {
       )
   } else {
     return (
-      <div className="container"> 
+      <div className="container" id="astromony-picture-container"> 
         <div className="card" >
           <img src={picture.picture.url} className="card-img-top" ></img>
           <h3 className="card-title" style={titleStyle}> {picture.picture.title} </h3> <FavoriteToggle date={picture.picture.date}/> 

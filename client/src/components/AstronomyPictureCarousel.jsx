@@ -15,7 +15,7 @@ import { Carousel } from 'react-responsive-carousel';
                  <p className="legend"> Explanation: {picture.explanation} </p>  
                </div>
       } else {
-        return <div className="carousel" id="carousel" key={picture.id}> 
+        return <div className="carousel" id="carousel" key={picture.id} id="astromony-picture-container"> 
                 <img src={ picture.url } />
                 <h3> date: {picture.date} </h3> 
                 <p className="legend"> {picture.date} {"/n"}{picture.title} {"/n"} Explanation: {picture.explanation} </p> 
