@@ -59,13 +59,8 @@
 		white-space: nowrap !important;
 	 }
 
-	 .sign-up-container > h2 {
-	display: inline-block !important;
-	 }
-
 	 .btn, .btn:link { 
 		margin: auto !important;
-		text-align: center !important;
 		margin-left: 10% !important;
 		margin-right: 10% !important;
 		line-height: 2.0;
@@ -75,8 +70,6 @@
 	 }
 
 	 section { margin-top: 30px;}
-
-	.join-now-link a { color: white !important}
 
  .image-flex-container{ 
 	 display: flex;
