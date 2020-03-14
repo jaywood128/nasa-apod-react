@@ -32,7 +32,7 @@ export const Navbar = () => (
           </Link>
         </li>
       </ul>
-      <a className="btn btn-success" href="/users_signout">
+      <a className="btn btn-dark btn-md" href="/users_signout">
         {" "}
         Sign out{" "}
       </a>

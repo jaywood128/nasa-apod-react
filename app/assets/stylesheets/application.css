@@ -60,9 +60,6 @@
 	 }
 
 	 .btn, .btn:link { 
-		margin: auto !important;
-		margin-left: 10% !important;
-		margin-right: 10% !important;
 		line-height: 2.0;
 		background-color: black !important;
 		width: 200px !important;
@@ -128,7 +125,7 @@
 nav { font-size: x-large;}
 
 body{
-		background-color: #fff;
+		background-color: #dcdcdc;
 		font-family: "Optima", sans-serif;
 		font-weight: 500;
 		text-align: center;
