@@ -16,13 +16,19 @@ input[type="text"] {
 
 #astromony-picture-container {
 	width: auto 0 !important;
-	height: 100px !important;
 }
 
 #carousel {
 font-size: 1.4em !important;
 width: 100% !important;
 height: 280px !important;
+}
+
+.carousel {
+	margin-top: 50px !important;
+	width: 1200px !important;
+	height: 600px !important;
+	margin: auto !important;
 }
 
 body {

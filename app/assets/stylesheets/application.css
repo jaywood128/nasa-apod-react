@@ -110,7 +110,9 @@
 	margin: auto !important;
 	margin-top: 30px !important;
 }
-
+.carousel .slide .legend  {
+	margin-top: 30px !important;
+}
 .devise-login-continer{
 	margin: 0 auto !important;
 	width: 50%;
