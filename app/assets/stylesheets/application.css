@@ -104,8 +104,7 @@
 	width: 50%;
   height: 400px;
 }
-
-.carousel {
+#carousel-container-landing-page {
   width: 800px !important;
 	height:360px !important;
 	margin: auto !important;
