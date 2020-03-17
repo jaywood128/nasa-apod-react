@@ -133,6 +133,12 @@ body{
 		/* background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs3.amazonaws.com%2Fopen-nasa-files%2Fimages%2Fapod1_copy.original.jpg&f=1&nofb=") */
 	 }
 
+
+	 #sign-up-login-button {
+		background-color: #007bff !important;
+		border-color: #007bff !important;
+	 }
+
 .form-control{
 		height: 41px;
 		background: #f2f2f2;
