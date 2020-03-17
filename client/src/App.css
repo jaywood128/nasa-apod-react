@@ -26,8 +26,8 @@ height: 280px !important;
 
 .carousel {
 	margin-top: 50px !important;
-	width: 1200px !important;
-	height: 600px !important;
+	width: 1350px !important;
+	height: 750px !important;
 	margin: auto !important;
 }
 
@@ -35,7 +35,7 @@ body {
 	background-color: #d3d3d3 !important;
 }
 
-.carousel .slide .legend {font-size: 25px !important }
+.carousel .slide .legend {font-size: 20px !important }
 
 .carousel .slide .img {
 	width: 100% !important;

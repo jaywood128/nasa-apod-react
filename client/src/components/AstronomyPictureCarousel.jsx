@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-// import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 
  const AstronomyPictureCarousel = (props) => { 
@@ -16,10 +15,11 @@ import { Carousel } from 'react-responsive-carousel';
                </div>
       } else {
         return <div className="carousel" id="carousel" key={picture.id} id="astromony-picture-container"> 
-                <img src={ picture.url } />
-                <h3> date: {picture.date} </h3> 
-                <p className="legend"> {picture.date} {"/n"}{picture.title} {"/n"} Explanation: {picture.explanation} </p> 
-               </div> 
+                  <img src={ picture.url } />
+                  <p className="legend"> Date: {picture.date} </p> 
+                  <p className="legend">{picture.title}</p>
+                  <p className="legend">Explanation: {picture.explanation} </p> 
+                </div> 
       }
 
     })
