@@ -24,7 +24,7 @@ class App extends Component {
             <Router>
                 <Navbar/>
                   <Switch> 
-                    <Route exact path='/app' render={() => <Redirect to="/astronomy_pictures/today"/>}/> 
+                    {/* <Route exact path='/app' render={() => <Redirect to="/astronomy_pictures/today"/>}/>  */}
                     <Route path='/last_thirty_days' component={LastThirtyDaysContainer}/> 
                     <Route path='/astronomy_pictures/:date' component={AstronomyPictureContainer}/> 
                     <Route path='/search_astronomy_pictures' render={ props => <SearchByDateContainer/> } /> 

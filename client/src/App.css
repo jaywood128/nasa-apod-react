@@ -174,3 +174,5 @@ input{
 ; background-color: #fff;
 }
 
+.carousel-item img { width: 100% !important;}
+

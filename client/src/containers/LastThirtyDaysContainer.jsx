@@ -2,6 +2,7 @@ import React from 'react'
 import { fetchLastThirtyDays } from '../actions/fetchLastThirtyDays';
 import { connect } from 'react-redux';
 import AstronomyPictureCarousel from '../components/AstronomyPictureCarousel'
+import CarouselWrapper from '../components/CarouselWrapper'
 
 class LastThirtyDaysContainer extends  React.Component{
   
@@ -19,7 +20,7 @@ class LastThirtyDaysContainer extends  React.Component{
      <div> 
       { 
         (pictures.length !== 0) ? 
-          <AstronomyPictureCarousel pictures={pictures} />
+          <CarouselWrapper pictures={pictures} />
         : <h3> Loading Carousel </h3>
       }
      </div>
