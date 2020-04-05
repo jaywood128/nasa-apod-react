@@ -8,7 +8,7 @@
 ## System dependencies
     See Gemfile
 ## Installing
-  [Directions](assets/images/readme_directions.png) 
+  [Directions](images/readme_directions.png) 
 
 
 ## Database creation
