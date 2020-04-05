@@ -8,6 +8,7 @@
     See Gemfile
 ## Installing
   ![Directions](https://i.imgur.com/59ewp4u.png) 
+  
   3. Run git clone <copied-ssh-link>: 
   `git clone git@github.com:jaywood128/nasa-apod-react.git`
 
