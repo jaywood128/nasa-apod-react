@@ -1,17 +1,17 @@
-# README
+# CosmosDaily
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ Using NASA's Astronomy Picture of the Day API, this application renders HD images and videos in a Bootstrap carousel. Users can also search for images and videos by day or see today's picture narrated by astronomers.
 
-Things you may want to cover:
 
-* Ruby version
+## Ruby version
+   2.6.1
+## System dependencies
+    See Gemfile
+## Installing
+  [Directions](assets/images/readme_directions.png) 
 
-* System dependencies
 
-* Configuration
-
-* Database creation
+## Database creation
 
 * Database initialization
 
