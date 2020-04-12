@@ -1,6 +1,15 @@
 # CosmosDaily
 
- Using NASA's Astronomy Picture of the Day API, this application renders HD images and videos in a Bootstrap carousel. Users can also search for images and videos by day or see today's picture narrated by astronomers.
+
+## Overview
+   CosmosDaily harnesses the power of NASA's Astronomy Picture of the Day API to render HD images and videos in a Bootstrap carousel. 
+
+   Aftering finding NASA's astronomy pictures and videos https://apod.nasa.gov/apod/astropix.html, I decided I wanted to take this wealth of data and hook it up to React to make it faster, more responsive and update the original styling with something more modern, ie. adding CSS Flexbox, shaddowing, and Bootstrap.  
+ 
+ ## Features
+  - Search for images and videos by date (YYYY-MM-DD) 
+  - Load today's astronomy image/video
+  - Scroll through the past 30 days of astronomy images/videos 
 
 ## Ruby version
    2.6.1
@@ -14,16 +23,19 @@
 
   4. `cd nasa-apod-react` 
 
-  5. `bundle install` for all dependencies 
+  6. `gem install bundler` -- install bundler to get dependencies 
 
-## Database creation
-   ` rake db:migrate `
+  5. `bundle install` -- installs all gem dependencies 
 
-  ## Up and running 
+  6. `rails s ` -- run server on 3000
 
-  6. Run server with `rails s ` to run 
+  ## Client
 
-  7. After opening a new terminal window and run `./bin/webpack-dev-server` to run client
+  7. Open a new terminal window
+
+  8. `yarn install`
+
+  9.  run `./bin/webpack-dev-server` to run the client
 
   # License 
   This project is licensed under the MIT License - see the LICENSE.md file for details
